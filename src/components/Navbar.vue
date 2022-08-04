@@ -16,12 +16,27 @@ const prod = ref(false)
 const prodDropdown = () => {
   prod.value = !prod.value
 }
+
+const solution = ref(false)
+const solutionDropdown = () => {
+  solution.value = !solution.value
+}
+
+const contact = ref(false)
+const contactDropdown = () => {
+  contact.value = !contact.value
+}
+const getApp = ref(false)
+const getAppDropdown = () => {
+  getApp.value = !getApp.value
+}
+
 </script>
 
 <template>
   <nav class="hidden sm:flex">
     <a href="#">
-      <img src="../assets/logo.png" alt="logo" class="w-12">
+      <img src="../assets/logo.png" alt="logo" class="w-10">
     </a>
     <a href="#">
       <img src="../assets/logoText.png" alt="logo" class=" h-5 m-5 w-22">
@@ -98,7 +113,7 @@ const prodDropdown = () => {
         <span class="mt-4 mx-2">Sign in</span>
 
         <div @click.prevent="showMenu" class="flex md:hidden mx-2">
-          <button type="button"  v-if="!show" class="
+          <button type="button" v-if="!show" class="
                 text-gray-800
                 p-2
                 hover:text-gray-400
@@ -114,71 +129,186 @@ const prodDropdown = () => {
         </div>
       </div>
     </div>
-    <div :class="show ? 'block' : 'hidden'" class="bg-navColor mt-0 p-6">
-      <div class="flex justify-between w-full m-3">
-        <div>
-          <span class="text-sm">Why Dropbox</span>
+    <div :class="show ? 'block' : 'hidden'" class="bg-navColor mt-0 p-4">
+      <div class="flex justify-between w-full ml-3 ">
+        <div class="mt-3">
+          <span class="text-sm ">Why Dropbox</span>
 
-             <div>
-          <ul v-if="drop" class="mt-5">
-          <li class="font-bold text-sm">Overview</li>
-          <li class="mt-4 text-xs">Get inspired</li>
-          <li class="mt-4 text-xs">What customers say</li>
-          <li class="mt-4 text-xs">App integrations</li>
-          <li class="mt-4 text-xs">Resources</li>
+          <div>
+            <ul v-if="drop" class="mt-5">
+              <li class="font-bold text-xs">Overview</li>
+              <li class="mt-4 text-xs">Get inspired</li>
+              <li class="mt-4 text-xs">What customers say</li>
+              <li class="mt-4 text-xs">App integrations</li>
+              <li class="mt-4 text-xs">Resources</li>
 
-          <li class="font-semibold mt-9 text-sm">Better with dropbox</li>
-          <li class="mt-4 text-xs">Share files</li>
-          <li class="mt-4 text-xs">Store and organize</li>
-          <li class="mt-4 text-xs">Sync your devices</li>
-          <li class="mt-4 text-xs">Protect and secure data</li>
-          <li class="mt-4 text-xs">Connect remote teams</li>
-          <li class="mt-4 text-xs">Keep work moving</li>
-          <li class="mt-4 text-xs">Always-on backup</li>
-          <li class="mt-4 text-xs">Sign a document</li>
-          <li class="mt-4 text-xs">Track document analytics</li>
+              <li class="font-semibold mt-9 text-sm">Better with dropbox</li>
+              <li class="mt-4 text-xs">Share files</li>
+              <li class="mt-4 text-xs">Store and organize</li>
+              <li class="mt-4 text-xs">Sync your devices</li>
+              <li class="mt-4 text-xs">Protect and secure data</li>
+              <li class="mt-4 text-xs">Connect remote teams</li>
+              <li class="mt-4 text-xs">Keep work moving</li>
+              <li class="mt-4 text-xs">Always-on backup</li>
+              <li class="mt-4 text-xs">Sign a document</li>
+              <li class="mt-4 text-xs">Track document analytics</li>
 
-        </ul>
-      </div>
+            </ul>
+          </div>
         </div>
-        
-        <div>
-            <i class="fa-solid fa-chevron-down" @click.prevent="dropBoxDropdown" v-if="!drop"></i>
-            <i class="fa-solid fa-chevron-up" @click.prevent="dropBoxDropdown" v-if="drop"></i>
+
+        <div class="m-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="dropBoxDropdown" v-if="!drop"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="dropBoxDropdown" v-if="drop"></i>
 
         </div>
-       
-      </div>
-   
 
-    <div class="flex justify-between w-full m-3 mt-7">
-        <div>
+      </div>
+      <div class="flex justify-between w-full ml-3">
+        <div class="mt-3">
           <span class="text-sm">Products</span>
 
-             <div>
-          <ul v-if="prod" class="mt-5">
-          <li class="font-bold text-xs mt-10">Do more than store with Dropbox</li>
-          <li class="mt-4 text-xs">
-            <div>
-              
-            </div>
+          <div>
+            <ul v-if="prod" class="mt-5">
+              <li class="font-bold text-xs mt-10">Do more than store with Dropbox</li>
+              <li class="mt-4 text-xs">
+                <div>
 
-          </li>
-          <li class="mt-4 text-xs">What customers say</li>
-          <li class="mt-4 text-xs">App integrations</li>
-          <li class="mt-4 text-xs">Resources</li>
-        </ul>
+                </div>
+
+              </li>
+              <li class="mt-4 text-xs">
+                <div class="flex">
+                  <div class="mt-2">
+                    <img src="../assets/Dropbox-logo-nav.svg" />
+                  </div>
+                  <div class="m-2">
+                    <p>Dropbox</p>
+                    <p class="font-light">Store, share and access files accross devices</p>
+                  </div>
+                </div>
+              </li>
+              <li class="mt-4 text-xs">
+                <div class="flex">
+                  <div class="mt-2">
+                    <img src="../assets/Backup-logo-nav.svg" />
+                  </div>
+                  <div class="m-2">
+                    <p>Backup</p>
+                    <p class="font-light">Automatically back up your files</p>
+                  </div>
+                </div>
+              </li>
+              <li class="mt-4 text-xs">
+                <div class="flex">
+                  <img src="../assets/HelloSign-logo-nav.svg" />
+                  <div class="m-2">
+                    <p>HelloSign</p>
+                    <p class="font-light">Request and add signatures to documents</p>
+                  </div>
+                </div>
+              </li>
+              <li class="mt-4 text-xs">
+                <div class="flex">
+                  <img src="../assets/DocSend-logo-nav.svg" />
+                  <div class="m-2">
+                    <p>DocSend</p>
+                    <p class="font-light">Send documents securely and track activity</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="m-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="prodDropdown" v-if="!prod"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="prodDropdown" v-if="prod"></i>
+
+        </div>
+
       </div>
-        </div>
-        
-        <div>
-            <i class="fa-solid fa-chevron-down" @click.prevent="prodDropdown" v-if="!prod"></i>
-            <i class="fa-solid fa-chevron-up" @click.prevent="prodDropdown" v-if="prod"></i>
+      <div class="flex justify-between w-full ml-3">
+        <div class="mt-3">
+          <span class="text-sm">Solutions</span>
 
+          <div>
+            <ul v-if="solution" class="mt-5">
+              <li class="text-xs mt-4">Creatives</li>
+              <li class="text-xs mt-4">Sales</li>
+              <li class="text-xs mt-4">Marketing</li>
+              <li class="text-xs mt-4">HR</li>
+              <li class="text-xs mt-4">IT</li>
+              <li class="text-xs mt-4">Team Lead</li>
+              <li class="text-xs mt-4">Personal</li>
+            </ul>
+          </div>
         </div>
-       
+        <div class="m-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="solutionDropdown" v-if="!solution"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="solutionDropdown" v-if="solution"></i>
+        </div>
+      </div>
+      
+      <div class="flex justify-between w-full ml-3">
+        <div class="mt-3">
+          <span class="text-sm">Pricing</span>
+        </div>
+        <div class="m-3"></div>
+      </div>
+
+      <div class="flex justify-between w-full ml-3 mt-3">
+        <div class="mt-3">
+          <span class="text-sm">Contact</span>
+
+          <div>
+            <ul v-if="contact" class="mt-5">
+              <li class="font-bold text-xs">Support</li>
+              <li class="mt-4 text-xs">Help center</li>
+              <li class="mt-4 text-xs">Community forums</li>
+            </ul>
+          </div>
+        </div>
+        <div class="m-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="contactDropdown" v-if="!contact"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="contactDropdown" v-if="contact"></i>
+        </div>
+      </div>
+
+
+      <div class="flex justify-between w-full ml-3">
+        <div class="mt-3">
+          <span class="text-sm">Get app</span>
+
+          <div>
+            <ul v-if="getApp" class="mt-5">
+              <li class="text-xs mt-4">Desktop app</li>
+              <li class="text-xs mt-4">Mobile app</li>
+            </ul>
+          </div>
+        </div>
+        <div class="m-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="getAppDropdown" v-if="!getApp"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="getAppDropdown" v-if="getApp"></i>
+        </div>
+      </div>
+
+       <div class="flex justify-between w-full ml-3">
+        <div class="mt-3">
+          <span class="text-sm">Sign up</span>
+        </div>
+        <div class="m-3"></div>
       </div>
     </div>
+
+
+    <footer>
+      <div class="w-100 border-gray-500 h-20 ">
+          <div class="bg-slate-600 text-red-200">
+            i dey inside this div
+          </div>
+      </div>
+    </footer>
   </nav>
 
 </template>

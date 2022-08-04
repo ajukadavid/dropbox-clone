@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {},
     colors:{
-      'navColor': '#F2EEE8'
+      'navColor': '#F2EEE8',
+      'footerBorderColor': '#E3DBD0'
     }
   },
   variants: {
