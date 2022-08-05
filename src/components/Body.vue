@@ -267,7 +267,7 @@
         </div>
         <div class="m-3"></div>
       </div>
-      <div class="w-full  text-white h-20 mb-2 p-6 flex justify-between bg-blue-500">
+      <div class="w-full  text-white h-20 mb-2 p-6 flex justify-between bg-blue-700">
         <span class="text-white">Get started</span>
         <span class="text-white"><i class="fa-solid fa-arrow-right"></i></span>
 
@@ -336,8 +336,6 @@
           shortcuts—together in
           <br /><span class="ml-24">one place.</span>
         </p>
-
-
       </div>
     </div>
   </section>
@@ -346,7 +344,7 @@
     <div class="">
       <div class="flex justify-between border-y-2 border-borderColor relative -top-3 p-6">
         <div>
-          <span class="font-semibold text-lg" @click.prevent="cloudDropdown">Get 2GB of cloud storage for free with
+          <span class="font-semibold text-md" @click.prevent="cloudDropdown">Get 2GB of cloud storage for free with
             Dropbox basic</span>
 
           <div v-if="cloud" class="mt-4">
@@ -367,7 +365,7 @@
 
       <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
         <div>
-          <span class="font-semibold text-lg" @click.prevent="plusDropdown">Dropbox plus has has room for all your
+          <span class="font-semibold text-md" @click.prevent="plusDropdown">Dropbox plus has has room for all your
             content with space to spare</span>
 
           <div v-if="plus" class="mt-4">
@@ -388,11 +386,13 @@
 
       <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
         <div>
-          <span class="font-semibold text-lg" @click.prevent="vacationDropdown">Dropbox Family is a place for everyone with space for everything</span>
+          <span class="font-semibold text-md" @click.prevent="vacationDropdown">Dropbox Family is a place for everyone
+            with space for everything</span>
 
           <div v-if="vacation" class="mt-4">
 
-            <p class="text-md">Share 2,000 GB of storage between 6 people. Each family plan member gets their own private Dropbox account for less than the price of two Plus plans.</p>
+            <p class="text-md">Share 2,000 GB of storage between 6 people. Each family plan member gets their own
+              private Dropbox account for less than the price of two Plus plans.</p>
             <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
             <div class="bg-yellow-400 py-16 px-7 mt-4">
               <img src="../assets/vacation.png" alt="basic hero" />
@@ -405,13 +405,15 @@
         </div>
       </div>
 
-       <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
+      <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
         <div>
-          <span class="font-semibold text-lg" @click.prevent="lifeDropdown">Make life easier for you and your clients with Dropbox Professional</span>
+          <span class="font-semibold text-md" @click.prevent="lifeDropdown">Make life easier for you and your clients
+            with Dropbox Professional</span>
 
           <div v-if="life" class="mt-4">
 
-            <p class="text-md">Get our full suite of premium productivity and sharing tools—plus 3,000 GB of space. Dropbox Professional makes it easier for you to work with colleagues and clients.</p>
+            <p class="text-md">Get our full suite of premium productivity and sharing tools—plus 3,000 GB of space.
+              Dropbox Professional makes it easier for you to work with colleagues and clients.</p>
             <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
             <div class="bg-lifeColor py-16 px-7 mt-4">
               <img src="../assets/pro_plank_02_ui@2x.png" alt="basic hero" />
@@ -424,13 +426,15 @@
         </div>
       </div>
 
-       <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
+      <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
         <div>
-          <span class="font-semibold text-lg" @click.prevent="streamlineDropdown">Streamline your document workflow with HelloSign</span>
+          <span class="font-semibold text-md" @click.prevent="streamlineDropdown">Streamline your document workflow with
+            HelloSign</span>
 
           <div v-if="streamline" class="mt-4">
 
-            <p class="text-md">Save yourself time and hassle with HelloSign. You can sign legally-binding agreements with a few clicks. And it's just as easy to request a signature from someone else.</p>
+            <p class="text-md">Save yourself time and hassle with HelloSign. You can sign legally-binding agreements
+              with a few clicks. And it's just as easy to request a signature from someone else.</p>
             <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
             <div class="bg-orange-500 py-16 px-7 mt-4">
               <img src="../assets/sign.png" alt="basic hero" />
@@ -443,13 +447,16 @@
         </div>
       </div>
 
-       <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
+      <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
         <div>
-          <span class="font-semibold text-lg" @click.prevent="centralDropdown">Centralize, secure, and easily access your work with Dropbox Standard</span>
+          <span class="font-semibold text-md" @click.prevent="centralDropdown">Centralize, secure, and easily access
+            your work with Dropbox Standard</span>
 
           <div v-if="central" class="mt-4">
 
-            <p class="text-md">Safeguard sensitive and confidential info. Automate time-consuming processes with powerful admin and collaboration tools. And easily recover your work if something ever goes wrong. Minimum 3 users per plan.</p>
+            <p class="text-md">Safeguard sensitive and confidential info. Automate time-consuming processes with
+              powerful admin and collaboration tools. And easily recover your work if something ever goes wrong. Minimum
+              3 users per plan.</p>
             <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
             <div class="bg-green-500 py-16 px-7 mt-4">
               <img src="../assets/CollabBrowse_2@2x.png" alt="basic hero" />
@@ -462,13 +469,15 @@
         </div>
       </div>
 
-       <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
+      <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
         <div>
-          <span class="font-semibold text-lg" @click.prevent="docSendDropdown">DocSend lets you track, analyze, and optimize your content</span>
+          <span class="font-semibold text-md" @click.prevent="docSendDropdown">DocSend lets you track, analyze, and
+            optimize your content</span>
 
           <div v-if="docSend" class="mt-4">
 
-            <p class="text-md">Safely share business-critical documents and get real-time performance insights. DocSend helps you manage and optimize your company’s most important content.</p>
+            <p class="text-md">Safely share business-critical documents and get real-time performance insights. DocSend
+              helps you manage and optimize your company’s most important content.</p>
             <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
             <div class="bg-blue-400 py-16 px-7 mt-4">
               <img src="../assets/collaboration-diagram.png" alt="basic hero" />
@@ -481,13 +490,16 @@
         </div>
       </div>
 
-       <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
+      <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
         <div>
-          <span class="font-semibold text-lg" @click.prevent="teamsDropdown">Proactively detect threats to your team’s content with Dropbox Advanced</span>
+          <span class="font-semibold text-md" @click.prevent="teamsDropdown">Proactively detect threats to your team’s
+            content with Dropbox Advanced</span>
 
           <div v-if="teams" class="mt-4">
 
-            <p class="text-md">Always-on security monitoring and alerts. Extended 1-year version history and file recovery. Plus all the storage space you need. Dropbox Advanced is a secure collaboration solution for your entire team. Minimum 3 users per plan.</p>
+            <p class="text-md">Always-on security monitoring and alerts. Extended 1-year version history and file
+              recovery. Plus all the storage space you need. Dropbox Advanced is a secure collaboration solution for
+              your entire team. Minimum 3 users per plan.</p>
             <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
             <div class="bg-purple-400 py-16 px-7 mt-4">
               <img src="../assets/JTBD_UI_7@2x.png" alt="basic hero" />
@@ -498,6 +510,119 @@
           <i class="fa-solid fa-chevron-down text-xs" @click.prevent="teamsDropdown" v-if="!teams"></i>
           <i class="fa-solid fa-chevron-up text-xs" @click.prevent="teamsDropdown" v-if="teams"></i>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="-mt-3 bg-navColor" :class="show ? 'hidden' : 'block'">
+    <div class="border-t-2 relative p-3 m-4">
+      <div class="w-full wrapper">
+
+        <p class="title-text mb-5 m-10 ">How will you use
+          <br /><span class="ml-10">Dropbox?</span>
+        </p>
+
+      </div>
+      <div class="max-w-sm  overflow-hidden shadow-sm">
+        <img class="w-full b" src="../assets/Segmentation_1@2x.png" alt="Segmentation one">
+        <div class="px-6 py-4 bg-white">
+          <div class=" text-4xl mb-2 ">For work</div>
+          <p class="text-gray-700 text-base">
+            Work efficiently with teammates and clients, stay in sync on projects, and keep company data safe—all in one
+            place.
+          </p>
+          <div class="mt-8">
+            <div class="w-full  text-white h-20 mb-2 p-6 flex justify-between bg-blue-700">
+              <span class="text-white">Get Dropbox for work</span>
+              <span class="text-white"><i class="fa-solid fa-arrow-right"></i></span>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="max-w-sm  overflow-hidden shadow-sm mt-5">
+        <img class="w-full b" src="../assets/Segmentation_2@2x.png" alt="Segmentation two">
+        <div class="px-6 py-4 bg-white">
+          <div class=" text-4xl mb-2 ">For personal use</div>
+          <p class="text-gray-700 text-base">
+            Keep everything that’s important to you and your family shareable and safe in one place. Back up files in
+            the cloud, share photos and videos, and more.
+          </p>
+          <div class="mt-8">
+            <div class="w-full  text-white h-20 mb-2 p-6 flex justify-between bg-blue-700">
+              <span class="text-white">Get Dropbox for personal use</span>
+              <span class="text-white"><i class="fa-solid fa-arrow-right"></i></span>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <p class="title-text mb-5 mt-4"><span class="ml-12">Get more out of</span>
+        <br /><span class="ml-2">Dropbox by connecting</span>
+        <br /><span class="ml-4"> with the tools you love</span>
+      </p>
+      <span class="underline underline-offset-1 ml-10 font-light">Learn more about partner integrations</span>
+      <div class="p-3">
+        <div class="mt-10">
+          <img src="../assets/zoom.png" alt="zoom" class="w-12 mb-4" />
+          <p class="font-bold text-md mb-4">Zoom</p>
+          <p>Enhance remote collaboration with Zoom instant meetings and video recordings.</p>
+        </div>
+        <div class="mt-8">
+          <img src="../assets/slack.png" alt="slack" class="w-12 mb-4" />
+          <p class="font-bold text-md mb-4">Slack</p>
+          <p>Bring Slack conversations and Dropbox content together to keep teams in sync.</p>
+        </div>
+        <div class="mt-8">
+          <img src="../assets/adobe_cc.png" alt="adobe" class="w-12 mb-4" />
+          <p class="font-bold text-md mb-4">Adobe Creative Cloud</p>
+          <p>Easily and securely send files to clients and vendors from within Adobe Photoshop.</p>
+        </div>
+        <div class="mt-8">
+          <img src="../assets/mic_office.png" alt="microsoft office" class="w-12 mb-4" />
+          <p class="font-bold text-md mb-4">Microsoft Office</p>
+          <p> Easily access, edit, and share Office docs online in Dropbox.</p>
+        </div>
+        <div class="mt-8">
+          <img src="../assets/google_wrkspace.png" alt="Google Workspace" class="w-12 mb-4" />
+          <p class="font-bold text-md mb-4">Google Workspace</p>
+          <p> Create, edit, and share Google Docs, Sheets, and Slides in Dropbox.</p>
+        </div>
+        <div class="mt-8">
+          <img src="../assets/trello.png" alt="Trello" class="w-12 mb-4" />
+          <p class="font-bold text-md mb-4">Trello</p>
+          <p> Collaborate on team projects in Trello with Dropbox content.</p>
+        </div>
+        <div class="mt-8">
+          <img src="../assets/canvas.png" alt="Canvas" class="w-12 mb-4" />
+          <p class="font-bold text-md mb-4">Canvas</p>
+          <p> Upload course files or assignments straight from Dropbox to Canvas.</p>
+        </div>
+        <div class="mt-8">
+          <img src="../assets/asana.png" alt="Asana" class="w-12 mb-4" />
+          <p class="font-bold text-md mb-4">Asana</p>
+          <p> Track all of your team’s work with Asana while keeping Dropbox content alongside.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-bodyColor relative w-full -top-3" :class="show ? 'hidden' : 'block'">
+    <div class="wrapper w-full">
+      <div class="mb-5">
+        <p class="title-text text-white mt-10">
+          <span class="ml-8">Trusted by over 700</span> <br />
+          <span class="">million registered users</span> <br />
+          <span class="ml-10"> and 600,000 teams
+          </span>
+          
+        </p>
+<p class="underline underline-offset-1 text-white ml-20 mt-4 mb-20">View more customer stories</p>
+
       </div>
     </div>
   </section>
@@ -596,7 +721,6 @@ const cloudDropdown = () => {
 .title-text {
     font-size: 22px;
     font-weight: 500;
-    
     font-family: 'BhuTuka Expanded One', cursive;
 }
 </style>

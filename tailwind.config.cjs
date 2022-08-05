@@ -18,6 +18,8 @@ module.exports = {
       'imgOneColor': '#15C8EB',
       'imgTwoColor': '#FF5A1F',
       'lifeColor': '#FFAFA5',
+      
+      
     }
   },
   variants: {
