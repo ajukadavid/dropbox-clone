@@ -1,43 +1,8 @@
-<script setup lang="ts">
 
-import { ref } from 'vue'
-
-const show = ref(false)
-
-const showMenu = () => {
-  show.value = !show.value
-  
-}
-const drop = ref(false)
-const dropBoxDropdown = () => {
-  drop.value = !drop.value
-}
-
-const prod = ref(false)
-const prodDropdown = () => {
-  prod.value = !prod.value
-}
-
-const solution = ref(false)
-const solutionDropdown = () => {
-  solution.value = !solution.value
-}
-
-const contact = ref(false)
-const contactDropdown = () => {
-  contact.value = !contact.value
-}
-const getApp = ref(false)
-const getAppDropdown = () => {
-  getApp.value = !getApp.value
-}
-
-
-</script>
 
 <template>
 
- <nav class="hidden sm:flex">
+  <nav class="hidden sm:flex">
     <a href="#">
       <img src="../assets/logo.png" alt="logo" class="w-10">
     </a>
@@ -252,7 +217,7 @@ const getAppDropdown = () => {
           <i class="fa-solid fa-chevron-up text-xs" @click.prevent="solutionDropdown" v-if="solution"></i>
         </div>
       </div>
-      
+
       <div class="flex justify-between w-full ml-3">
         <div class="mt-3">
           <span class="text-sm">Pricing</span>
@@ -296,77 +261,316 @@ const getAppDropdown = () => {
         </div>
       </div>
 
-       <div class="flex justify-between w-full ml-3 mb-12">
+      <div class="flex justify-between w-full ml-3 mb-12">
         <div class="mt-3">
           <span class="text-sm">Sign up</span>
         </div>
         <div class="m-3"></div>
       </div>
-      <div class="w-full border-red-500 text-white h-20 mb-2 p-6 flex justify-between button-bottom-container">
-            <span class="text-white">Get started</span>
-            <span class="text-white"><i class="fa-solid fa-arrow-right"></i></span>
+      <div class="w-full  text-white h-20 mb-2 p-6 flex justify-between bg-blue-500">
+        <span class="text-white">Get started</span>
+        <span class="text-white"><i class="fa-solid fa-arrow-right"></i></span>
 
       </div>
-    </div>   
+    </div>
   </nav>
 
 
-<section class="bg-bodyColor relative w-full -top-3" :class="show ? 'hidden' : 'block'">
-<div class="wrapper w-full">
-    <div class="p-9">
-        <p class="title-text text-white mb-4 mt-20">More inspiration, less <br /><span class="ml-14">interruption</span></p>
+  <section class="bg-bodyColor relative w-full -top-3" :class="show ? 'hidden' : 'block'">
+    <div class="wrapper w-full">
+      <div class="p-9">
+        <p class="title-text text-white mb-4 mt-20">More inspiration, less <br /><span class="ml-14">interruption</span>
+        </p>
 
-        <p class="text-white text-lg">Dropbox lets you simplify your workflow. <br /> So you can spend more time in your flow.</p>
+        <p class="text-white text-lg">Dropbox lets you simplify your workflow. <br /> So you can spend more time in your
+          flow.</p>
         <div class="w-40 border-red-500 text-white ml-20 mb-2 mt-6 p-5 flex justify-between bg-btnColor">
-            <span class="text-black text-sm">Find your plan</span>
-            <span class="text-black"><i class="fa-solid fa-arrow-right"></i></span>
+          <span class="text-black text-sm">Find your plan</span>
+          <span class="text-black"><i class="fa-solid fa-arrow-right"></i></span>
 
-      </div>
-      <div class="w-80">
-        <img src="../assets/asset2.png" alt="image asset" class="mt-9 mb-5" />
-      </div>
+        </div>
+        <div class="w-80">
+          <img src="../assets/asset2.png" alt="image asset" class="mt-9 mb-5" />
+        </div>
 
-      <div>
-        <div class="mb-5">
-            <img src="../assets/pic1.png" alt="pdf picture" class=" mb-5"/>
+        <div>
+          <div class="mb-5">
+            <img src="../assets/pic1.png" alt="pdf picture" class=" mb-5" />
             <span class="font-bold text-white mt-8 mb-5">Protect everything, everywhere</span>
-            <p class="text-white mt-5 font-light">All your videos, Photoshop files, PDFs, and Keynote decks, all securely backed up in one place.</p>
-        </div>
+            <p class="text-white mt-5 font-light">All your videos, Photoshop files, PDFs, and Keynote decks, all
+              securely backed up in one place.</p>
+          </div>
           <div class="mb-5">
-            <img src="../assets/pic2.png" alt="pdf picture" class=" mb-5"/>
+            <img src="../assets/pic2.png" alt="pdf picture" class=" mb-5" />
             <span class="font-bold text-white mt-8 mb-5">Streamline client feedback</span>
-            <p class="text-white mt-5 font-light">Make creative review simpler for everyone, with comments and input clearly connected to your content.</p>
-        </div>
-         <div>
-            <img src="../assets/img.jpeg" alt="pdf picture" class=" mb-5"/>
+            <p class="text-white mt-5 font-light">Make creative review simpler for everyone, with comments and input
+              clearly connected to your content.</p>
+          </div>
+          <div>
+            <img src="../assets/img.jpeg" alt="pdf picture" class=" mb-5" />
             <span class="font-bold text-white mt-8 mb-5">Deliver projects with ease</span>
-            <p class="text-white mt-5 font-light mb-5">Hand off large files, confirm delivery, and control who has access with password protection and link expirations.</p>
-        </div>
+            <p class="text-white mt-5 font-light mb-5">Hand off large files, confirm delivery, and control who has
+              access with password protection and link expirations.</p>
+          </div>
           <div class="mb-5">
-            <img src="../assets/img.jpeg" alt="pdf picture" class=" mb-5"/>
+            <img src="../assets/pic3.png" alt="pdf picture" class=" mb-5" />
             <span class="font-bold text-white mt-8 mb-5">Make complex contracts easy</span>
-            <p class="text-white mt-5 font-light">Capture electronic signatures on NDAs, SOWs, licensing and copyright agreements, and more, fast.
+            <p class="text-white mt-5 font-light">Capture electronic signatures on NDAs, SOWs, licensing and copyright
+              agreements, and more, fast.
 
-</p>
+            </p>
+          </div>
         </div>
       </div>
-   </div>
-   
-</div>
-</section>
 
-<section class="bg-navColor relative w-full -top-3" :class="show ? 'hidden' : 'block'">
-<div class="wrapper w-full">
-<div class="">
-    <p class="title-text mb-4 mt-20">What can Dropbox help 
- <br /><span class="ml-28">you do?</span></p>
-         <p class=" text-md ml-5 mb-8">Dropbox brings everything—traditional files, <br /> cloud content, and web shortcuts—together in 
-         <br /><span class="ml-24">one place.</span>
-         </p>
-</div>
-</div>
-</section>
+    </div>
+  </section>
+
+  <section class="bg-navColor relative w-full -top-3" :class="show ? 'hidden' : 'block'">
+    <div class="wrapper w-full">
+      <div class="p-4">
+        <p class="title-text mb-4 mt-20">What can Dropbox help
+          <br /><span class="ml-28">you do?</span>
+        </p>
+        <p class=" text-md ml-5 mb-8">Dropbox brings everything—traditional files, <br /> cloud content, and web
+          shortcuts—together in
+          <br /><span class="ml-24">one place.</span>
+        </p>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-4" :class="show ? 'hidden' : 'block'">
+    <div class="">
+      <div class="flex justify-between border-y-2 border-borderColor relative -top-3 p-6">
+        <div>
+          <span class="font-semibold text-lg" @click.prevent="cloudDropdown">Get 2GB of cloud storage for free with
+            Dropbox basic</span>
+
+          <div v-if="cloud" class="mt-4">
+
+            <p class="text-md">Save and access your files from any device, and share them with anyone. Discover what
+              Dropbox can do for you—get a free account, no strings attached!</p>
+            <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
+            <div class="bg-imgOneColor   py-16 px-7 mt-4">
+              <img src="../assets/img1.png" alt="basic hero" />
+            </div>
+          </div>
+        </div>
+        <div class="ml-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="cloudDropdown" v-if="!cloud"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="cloudDropdown" v-if="cloud"></i>
+        </div>
+      </div>
+
+      <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
+        <div>
+          <span class="font-semibold text-lg" @click.prevent="plusDropdown">Dropbox plus has has room for all your
+            content with space to spare</span>
+
+          <div v-if="plus" class="mt-4">
+
+            <p class="text-md">Safeguard your photos, personal docs, work files, and much more. Save everything with
+              2,000 GB of space—and get some handy tools to help you stay organized.</p>
+            <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
+            <div class="bg-imgTwoColor py-16 px-7 mt-4">
+              <img src="../assets/file.png" alt="basic hero" />
+            </div>
+          </div>
+        </div>
+        <div class="ml-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="plusDropdown" v-if="!plus"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="plusDropdown" v-if="plus"></i>
+        </div>
+      </div>
+
+      <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
+        <div>
+          <span class="font-semibold text-lg" @click.prevent="vacationDropdown">Dropbox Family is a place for everyone with space for everything</span>
+
+          <div v-if="vacation" class="mt-4">
+
+            <p class="text-md">Share 2,000 GB of storage between 6 people. Each family plan member gets their own private Dropbox account for less than the price of two Plus plans.</p>
+            <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
+            <div class="bg-yellow-400 py-16 px-7 mt-4">
+              <img src="../assets/vacation.png" alt="basic hero" />
+            </div>
+          </div>
+        </div>
+        <div class="ml-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="vacationDropdown" v-if="!vacation"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="vacationDropdown" v-if="vacation"></i>
+        </div>
+      </div>
+
+       <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
+        <div>
+          <span class="font-semibold text-lg" @click.prevent="lifeDropdown">Make life easier for you and your clients with Dropbox Professional</span>
+
+          <div v-if="life" class="mt-4">
+
+            <p class="text-md">Get our full suite of premium productivity and sharing tools—plus 3,000 GB of space. Dropbox Professional makes it easier for you to work with colleagues and clients.</p>
+            <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
+            <div class="bg-lifeColor py-16 px-7 mt-4">
+              <img src="../assets/pro_plank_02_ui@2x.png" alt="basic hero" />
+            </div>
+          </div>
+        </div>
+        <div class="ml-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="lifeDropdown" v-if="!life"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="lifeDropdown" v-if="life"></i>
+        </div>
+      </div>
+
+       <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
+        <div>
+          <span class="font-semibold text-lg" @click.prevent="streamlineDropdown">Streamline your document workflow with HelloSign</span>
+
+          <div v-if="streamline" class="mt-4">
+
+            <p class="text-md">Save yourself time and hassle with HelloSign. You can sign legally-binding agreements with a few clicks. And it's just as easy to request a signature from someone else.</p>
+            <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
+            <div class="bg-orange-500 py-16 px-7 mt-4">
+              <img src="../assets/sign.png" alt="basic hero" />
+            </div>
+          </div>
+        </div>
+        <div class="ml-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="streamlineDropdown" v-if="!streamline"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="streamlineDropdown" v-if="streamline"></i>
+        </div>
+      </div>
+
+       <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
+        <div>
+          <span class="font-semibold text-lg" @click.prevent="centralDropdown">Centralize, secure, and easily access your work with Dropbox Standard</span>
+
+          <div v-if="central" class="mt-4">
+
+            <p class="text-md">Safeguard sensitive and confidential info. Automate time-consuming processes with powerful admin and collaboration tools. And easily recover your work if something ever goes wrong. Minimum 3 users per plan.</p>
+            <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
+            <div class="bg-green-500 py-16 px-7 mt-4">
+              <img src="../assets/CollabBrowse_2@2x.png" alt="basic hero" />
+            </div>
+          </div>
+        </div>
+        <div class="ml-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="centralDropdown" v-if="!central"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="centralDropdown" v-if="central"></i>
+        </div>
+      </div>
+
+       <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
+        <div>
+          <span class="font-semibold text-lg" @click.prevent="docSendDropdown">DocSend lets you track, analyze, and optimize your content</span>
+
+          <div v-if="docSend" class="mt-4">
+
+            <p class="text-md">Safely share business-critical documents and get real-time performance insights. DocSend helps you manage and optimize your company’s most important content.</p>
+            <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
+            <div class="bg-blue-400 py-16 px-7 mt-4">
+              <img src="../assets/collaboration-diagram.png" alt="basic hero" />
+            </div>
+          </div>
+        </div>
+        <div class="ml-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="docSendDropdown" v-if="!docSend"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="docSendDropdown" v-if="docSend"></i>
+        </div>
+      </div>
+
+       <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
+        <div>
+          <span class="font-semibold text-lg" @click.prevent="teamsDropdown">Proactively detect threats to your team’s content with Dropbox Advanced</span>
+
+          <div v-if="teams" class="mt-4">
+
+            <p class="text-md">Always-on security monitoring and alerts. Extended 1-year version history and file recovery. Plus all the storage space you need. Dropbox Advanced is a secure collaboration solution for your entire team. Minimum 3 users per plan.</p>
+            <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
+            <div class="bg-purple-400 py-16 px-7 mt-4">
+              <img src="../assets/JTBD_UI_7@2x.png" alt="basic hero" />
+            </div>
+          </div>
+        </div>
+        <div class="ml-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="teamsDropdown" v-if="!teams"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="teamsDropdown" v-if="teams"></i>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
+
+
+<script setup lang="ts">
+
+import { ref } from 'vue'
+
+const streamline = ref(false)
+const streamlineDropdown = () => {
+  streamline.value = !streamline.value
+}
+
+const central = ref(false)
+const centralDropdown = () => central.value = !central.value
+
+const teams = ref(false)
+const teamsDropdown = () => teams.value = !teams.value
+const docSend = ref(false)
+const docSendDropdown = () => docSend.value = !docSend.value
+
+
+const life = ref(false)
+const lifeDropdown = () => life.value = !life.value
+
+const vacation = ref(false)
+const vacationDropdown = () => {
+  vacation.value = !vacation.value
+}
+
+const plus = ref(false)
+const plusDropdown = () => {
+  plus.value = !plus.value
+}
+
+const show = ref(false)
+
+const showMenu = () => {
+  show.value = !show.value
+  
+}
+const drop = ref(false)
+const dropBoxDropdown = () => {
+  drop.value = !drop.value
+}
+
+const prod = ref(false)
+const prodDropdown = () => {
+  prod.value = !prod.value
+}
+
+const solution = ref(false)
+const solutionDropdown = () => {
+  solution.value = !solution.value
+}
+
+const contact = ref(false)
+const contactDropdown = () => {
+  contact.value = !contact.value
+}
+const getApp = ref(false)
+const getAppDropdown = () => {
+  getApp.value = !getApp.value
+}
+
+const cloud = ref(false)
+const cloudDropdown = () => {
+  cloud.value = !cloud.value
+}
+
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap');
@@ -376,7 +580,7 @@ const getAppDropdown = () => {
 }
 
 .button-bottom-container{
-  
+  color: blue;
 }
 .button-bottom-container > span{
  color: black;

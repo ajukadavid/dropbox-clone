@@ -14,6 +14,10 @@ module.exports = {
       'buttonColor': '#0161FE',
       'bodyColor': '#1E1919',
       'btnColor': '#3983FF',
+      'borderColor': '#C9C5BD',
+      'imgOneColor': '#15C8EB',
+      'imgTwoColor': '#FF5A1F',
+      'lifeColor': '#FFAFA5',
     }
   },
   variants: {
