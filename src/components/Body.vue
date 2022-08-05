@@ -307,17 +307,14 @@ const getAppDropdown = () => {
             <span class="text-white"><i class="fa-solid fa-arrow-right"></i></span>
 
       </div>
-    </div>
-
-
-      
+    </div>   
   </nav>
 
 
-<section class="bg-bodyColor relative -top-3" :class="show ? 'hidden' : 'block'">
-<div class="wrapper">
-    <div>
-        <p class="title-text mb-4">More inspiration, less <br /><span class="ml-14">interruption</span></p>
+<section class="bg-bodyColor relative w-full -top-3" :class="show ? 'hidden' : 'block'">
+<div class="wrapper w-full">
+    <div class="p-9">
+        <p class="title-text text-white mb-4 mt-20">More inspiration, less <br /><span class="ml-14">interruption</span></p>
 
         <p class="text-white text-lg">Dropbox lets you simplify your workflow. <br /> So you can spend more time in your flow.</p>
         <div class="w-40 border-red-500 text-white ml-20 mb-2 mt-6 p-5 flex justify-between bg-btnColor">
@@ -325,10 +322,49 @@ const getAppDropdown = () => {
             <span class="text-black"><i class="fa-solid fa-arrow-right"></i></span>
 
       </div>
+      <div class="w-80">
+        <img src="../assets/asset2.png" alt="image asset" class="mt-9 mb-5" />
+      </div>
+
+      <div>
+        <div class="mb-5">
+            <img src="../assets/pic1.png" alt="pdf picture" class=" mb-5"/>
+            <span class="font-bold text-white mt-8 mb-5">Protect everything, everywhere</span>
+            <p class="text-white mt-5 font-light">All your videos, Photoshop files, PDFs, and Keynote decks, all securely backed up in one place.</p>
+        </div>
+          <div class="mb-5">
+            <img src="../assets/pic2.png" alt="pdf picture" class=" mb-5"/>
+            <span class="font-bold text-white mt-8 mb-5">Streamline client feedback</span>
+            <p class="text-white mt-5 font-light">Make creative review simpler for everyone, with comments and input clearly connected to your content.</p>
+        </div>
+         <div>
+            <img src="../assets/img.jpeg" alt="pdf picture" class=" mb-5"/>
+            <span class="font-bold text-white mt-8 mb-5">Deliver projects with ease</span>
+            <p class="text-white mt-5 font-light mb-5">Hand off large files, confirm delivery, and control who has access with password protection and link expirations.</p>
+        </div>
+          <div class="mb-5">
+            <img src="../assets/img.jpeg" alt="pdf picture" class=" mb-5"/>
+            <span class="font-bold text-white mt-8 mb-5">Make complex contracts easy</span>
+            <p class="text-white mt-5 font-light">Capture electronic signatures on NDAs, SOWs, licensing and copyright agreements, and more, fast.
+
+</p>
+        </div>
+      </div>
    </div>
+   
 </div>
-<div></div>
-<div></div>
+</section>
+
+<section class="bg-navColor relative w-full -top-3" :class="show ? 'hidden' : 'block'">
+<div class="wrapper w-full">
+<div class="">
+    <p class="title-text mb-4 mt-20">What can Dropbox help 
+ <br /><span class="ml-28">you do?</span></p>
+         <p class=" text-md ml-5 mb-8">Dropbox brings everything—traditional files, <br /> cloud content, and web shortcuts—together in 
+         <br /><span class="ml-24">one place.</span>
+         </p>
+</div>
+</div>
 </section>
 </template>
 
@@ -351,12 +387,12 @@ const getAppDropdown = () => {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    
 }
 .title-text {
     font-size: 22px;
     font-weight: 500;
-    color: white;
+    
     font-family: 'BhuTuka Expanded One', cursive;
 }
 </style>
