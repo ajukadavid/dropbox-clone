@@ -625,13 +625,18 @@
 
       </div>
     </div>
+
+
+  <Swiper />
   </section>
+
 </template>
 
 
 <script setup lang="ts">
 
 import { ref } from 'vue'
+import Swiper from './Swiper.vue';
 
 const streamline = ref(false)
 const streamlineDropdown = () => {
