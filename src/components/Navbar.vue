@@ -124,7 +124,7 @@ ul li ul li {
       <div>
         <button class="peer px-5 py-4 hover:bg-navColor text-black">Products</button>
 
-        <!-- the menu here -->
+         the menu here 
         <div class=" hidden peer-hover:flex hover:flex flex
         max-w-2xl
          flex-col bg-navColor">

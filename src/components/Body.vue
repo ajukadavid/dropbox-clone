@@ -2,70 +2,25 @@
 
 <template>
 
-  <nav class="hidden sm:flex">
+<div class="m-0 p-0">
+  
+
+  <!-- <nav class="hidden sm:flex">
     <a href="#">
       <img src="../assets/logo.png" alt="logo" class="w-10">
     </a>
     <a href="#">
       <img src="../assets/logoText.png" alt="logo" class=" h-5 m-5 w-22">
     </a>
-    <div class="">
-      <div>
-        <button class="peer px-5 py-4 hover:bg-navColor text-black">Why dropbox?</button>
 
-        <!-- the menu here -->
-        <div class="hidden peer-hover:flex hover:flex flex
-         flex-col bg-navColor">
-          <div class="flex">
-            <ul class="m-5">
-              <li class="font-semibold m-2 text-xs">Overview</li>
-              <li class="m-2 text-xs">Get inspired</li>
-              <li class="m-2 text-xs">What customers say</li>
-              <li class="m-2 text-xs">App integrations</li>
-              <li class="m-2 text-xs">Resources</li>
-            </ul>
 
-            <ul class="m-5 mb-7 mr-12">
-              <li class="font-semibold m-2 text-xs">Better with Dropbox</li>
-              <li class="m-2 text-xs">Share files</li>
-              <li class="m-2 text-xs">Store and organize</li>
-              <li class="m-2 text-xs">Sync your devices</li>
-              <li class="m-2 text-xs">Protect and secure data</li>
-              <li class="m-2 text-xs">Connect remote teams</li>
-              <li class="m-2 text-xs">Keep work moving</li>
 
-              <li class="m-2 text-xs">Always-on backup</li>
+   
+   
 
-              <li class="m-2 text-xs">Sign a document</li>
+  </nav> -->
 
-              <li class="m-2 text-xs">Track document analytics</li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div>
-        <button class="peer px-5 py-4 hover:bg-navColor text-black">Products</button>
-
-        <!-- the menu here -->
-        <div class=" hidden peer-hover:flex hover:flex flex
-        max-w-2xl
-         flex-col bg-navColor">
-          <div class="flex">
-            <ul class="m-5">
-              <li class="font-semibold m-2 text-xs">Overview</li>
-              <li class="m-2 text-xs">Get inspired</li>
-              <li class="m-2 text-xs">What customers say</li>
-              <li class="m-2 text-xs">App integrations</li>
-              <li class="m-2 text-xs">Resources</li>
-            </ul>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </nav>
+  <Navbar />
 
   <nav class="sm:hidden">
     <div class="flex justify-between">
@@ -515,7 +470,7 @@
   </section>
 
   <section class="-mt-3 bg-navColor" :class="show ? 'hidden' : 'block'">
-    <div class="border-t-2 relative p-3 m-4">
+    <div class="border-t-2 relative p-3">
       <div class="w-full wrapper">
 
         <p class="title-text mb-5 m-10 ">How will you use
@@ -611,7 +566,7 @@
     </div>
   </section>
 
-  <section class="bg-bodyColor relative w-full -top-3" :class="show ? 'hidden' : 'block'">
+  <section class="bg-bodyColor relative w-full" :class="show ? 'hidden' : 'block'">
     <div class="wrapper w-full">
       <div class="mb-5">
         <p class="title-text text-white mt-10">
@@ -627,9 +582,166 @@
     </div>
 
 
-  <Swiper />
-  </section>
+  <Swiper :class="show ? 'hidden' : 'block'"/>
 
+  <div class="p-10">
+      <p class="text-white text-4xl mb-4 font-extralight">For all things worth <br /> <span class="">Sharing</span>
+          </p>
+        <div class="w-full border-red-500 text-white mb-2 mt-6 p-5 flex justify-between bg-btnColor">
+          <span class="text-black text-md font-bold">Explore plans</span>
+          <span class="text-black"><i class="fa-solid fa-arrow-right"></i></span>
+
+        </div>
+  </div>
+  </section>
+  <section :class="show ? 'hidden' : 'block'" class="bg-black relative w-full pb-5 p-3">
+<div class="text-white flex flex-wrap">
+<ul class="p-8">
+  <li class="mb-6 font-bold text-lg">
+    Dropbox
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Desktop app
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Mobile app
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Integrations
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Features
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Solutions
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Do more than store
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Security
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Advance access
+  </li>
+</ul>
+<ul class="p-8">
+  <li class="mb-6 font-bold text-lg">
+    Products
+  </li>
+   <li class="text-xs font-extralight my-2">
+Plus
+</li>
+   <li class="text-xs font-extralight my-2">
+   Professional
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Business
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Enterprise
+  </li>
+   <li class="text-xs font-extralight my-2">
+    HelloSign
+  </li>
+   <li class="text-xs font-extralight my-2">
+    DocSend
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Plans
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Product updates
+  </li>
+</ul>
+<ul class="p-8">
+  <li class="mb-6 font-bold text-lg">
+    Support
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Help Center
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Contact us
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Privacy & Terms
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Cookie policy
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Cookies & CCPA preferences
+  </li>
+   <li class="text-xs font-extralight my-2">
+  Sitemap
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Learning resources
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Advance access
+  </li>
+</ul>
+<ul class="mt-8 -ml-5">
+  <li class="mb-6 font-bold text-lg">
+    Community
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Blog
+  </li>
+   <li class="text-xs font-extralight my-2">
+   Developers
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Community forums
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Refferals
+  </li>
+</ul>
+
+<ul class="p-8">
+  <li class="mb-6 font-bold text-lg">
+    Company
+  </li>
+   <li class="text-xs font-extralight my-2">
+    About us
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Jobs
+  </li>
+   <li class="text-xs font-extralight my-2">
+    Investor relations
+  </li>
+   <li class="text-xs font-extralight my-2">
+    ESG
+  </li>
+   <li class="text-xs font-extralight my-2">
+   Partners
+  </li>
+</ul>
+
+
+<hr/>
+
+</div>
+
+<div class="flex text-white ml-1">
+<i class="fa-brands fa-twitter text-2xl mx-4"></i>
+<i class="fa-brands fa-facebook text-2xl mx-4"></i>
+<i class="fa-brands fa-youtube text-2xl mx-4"></i>
+</div>
+<hr  class="bg-white mt-10 w-40 ml-5 text-xs opacity-50"/>
+
+<div class="flex text-white mt-8 ml-5">
+  <i class="fa-solid fa-globe mr-2"></i>
+       <p class="-mt-1">English (United States)</p> 
+       <span><i class="fa-solid fa-arrow-right ml-2 -mt-5"></i></span>
+
+</div>
+  </section>
+</div>
 </template>
 
 
@@ -637,6 +749,8 @@
 
 import { ref } from 'vue'
 import Swiper from './Swiper.vue';
+import Navbar from './Navbar.vue';
+
 
 const streamline = ref(false)
 const streamlineDropdown = () => {
@@ -728,4 +842,7 @@ const cloudDropdown = () => {
     font-weight: 500;
     font-family: 'BhuTuka Expanded One', cursive;
 }
+
+
+
 </style>
