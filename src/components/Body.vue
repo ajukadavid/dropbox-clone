@@ -1,27 +1,8 @@
 
 
 <template>
-
-<div class="m-0 p-0">
-  
-
-  <!-- <nav class="hidden sm:flex">
-    <a href="#">
-      <img src="../assets/logo.png" alt="logo" class="w-10">
-    </a>
-    <a href="#">
-      <img src="../assets/logoText.png" alt="logo" class=" h-5 m-5 w-22">
-    </a>
-
-
-
-   
-   
-
-  </nav> -->
-
-  <Navbar />
-
+ <Navbar class="hidden sm:flex"/>
+<div class="">
   <nav class="sm:hidden">
     <div class="flex justify-between">
       <div class="flex">
@@ -233,35 +214,37 @@
 
   <section class="bg-bodyColor relative w-full -top-3" :class="show ? 'hidden' : 'block'">
     <div class="wrapper w-full">
-      <div class="p-9">
-        <p class="title-text text-white mb-4 mt-20">More inspiration, less <br /><span class="ml-14">interruption</span>
+      <div class="p-9 sm:w-full">
+        <div class=" sm:flex sm:items-center sm:flex-col">
+          <p class="title-text text-xl sm:text-4xl font-extrabold text-white mb-4 mt-20">More inspiration, less <br class="sm:hidden"/><span class="ml-14 sm:ml-0">interruption</span>
         </p>
 
-        <p class="text-white text-lg">Dropbox lets you simplify your workflow. <br /> So you can spend more time in your
-          flow.</p>
-        <div class="w-40 border-red-500 text-white ml-20 mb-2 mt-6 p-5 flex justify-between bg-btnColor">
-          <span class="text-black text-sm">Find your plan</span>
-          <span class="text-black"><i class="fa-solid fa-arrow-right"></i></span>
+        <p class="text-white text-lg sm:text-base">Dropbox lets you simplify your workflow. <br class="sm:hidden"/> <span>So you can spend more time in your
+          flow.</span></p>
+        <div class="w-40 sm:w-52 text-white ml-20 sm:ml-2 mb-2 mt-6 p-5 flex justify-between bg-btnColor">
+          <span class="text-black text-sm sm:text-xl">Find your plan</span>
+          <span class="text-black font-bold"><i class="fa-solid fa-arrow-right"></i></span>
 
         </div>
-        <div class="w-80">
+        </div>
+        <div class="w-80 sm:w-full">
           <img src="../assets/asset2.png" alt="image asset" class="mt-9 mb-5" />
         </div>
 
-        <div>
-          <div class="mb-5">
+        <div class="sm:flex sm:mt-10">
+          <div class="mb-5 sm:mr-8">
             <img src="../assets/pic1.png" alt="pdf picture" class=" mb-5" />
             <span class="font-bold text-white mt-8 mb-5">Protect everything, everywhere</span>
             <p class="text-white mt-5 font-light">All your videos, Photoshop files, PDFs, and Keynote decks, all
               securely backed up in one place.</p>
           </div>
-          <div class="mb-5">
+          <div class="mb-5 sm:mr-8">
             <img src="../assets/pic2.png" alt="pdf picture" class=" mb-5" />
             <span class="font-bold text-white mt-8 mb-5">Streamline client feedback</span>
             <p class="text-white mt-5 font-light">Make creative review simpler for everyone, with comments and input
               clearly connected to your content.</p>
           </div>
-          <div>
+          <div class="sm:mr-8">
             <img src="../assets/img.jpeg" alt="pdf picture" class=" mb-5" />
             <span class="font-bold text-white mt-8 mb-5">Deliver projects with ease</span>
             <p class="text-white mt-5 font-light mb-5">Hand off large files, confirm delivery, and control who has
@@ -284,19 +267,20 @@
   <section class="bg-navColor relative w-full -top-3" :class="show ? 'hidden' : 'block'">
     <div class="wrapper w-full">
       <div class="p-4">
-        <p class="title-text mb-4 mt-20">What can Dropbox help
-          <br /><span class="ml-28">you do?</span>
+        <p class="title-text mb-4 mt-20 sm:text-3xl font-bold sm:ml-20">What can Dropbox help
+          <br class="sm:hidden"/><span class="ml-28 sm:ml-0">you do?</span>
         </p>
-        <p class=" text-md ml-5 mb-8">Dropbox brings everything—traditional files, <br /> cloud content, and web
+        <p class=" text-md ml-5 sm:ml-10 mb-8">Dropbox brings everything—traditional files, <br class="sm:hidden"/> cloud content, and web
           shortcuts—together in
-          <br /><span class="ml-24">one place.</span>
+          <br class="sm:hidden"/><span class="ml-24 sm:ml-0">one place.</span>
         </p>
       </div>
     </div>
   </section>
 
   <section class="mx-4" :class="show ? 'hidden' : 'block'">
-    <div class="">
+  
+    <div class="sm:hidden">
       <div class="flex justify-between border-y-2 border-borderColor relative -top-3 p-6">
         <div>
           <span class="font-semibold text-md" @click.prevent="cloudDropdown">Get 2GB of cloud storage for free with
@@ -465,6 +449,55 @@
           <i class="fa-solid fa-chevron-down text-xs" @click.prevent="teamsDropdown" v-if="!teams"></i>
           <i class="fa-solid fa-chevron-up text-xs" @click.prevent="teamsDropdown" v-if="teams"></i>
         </div>
+      </div>
+    </div>
+    <div class="hidden sm:flex sm:w-full">
+      <div class="w-1/2">
+        <div class="flex justify-between border-y-2 border-borderColor relative -top-3 p-6">
+        <div>
+          <span class="font-semibold text-md" @click.prevent="cloudDropdown">Get 2GB of cloud storage for free with
+            Dropbox basic</span>
+
+          <div v-if="cloud" class="mt-4 sm:mt-0">
+
+            <p class="text-md py-2">Save and access your files from any device, and share them with anyone. Discover what
+              Dropbox can do for you—get a free account, no strings attached!</p>
+            <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
+           
+          </div>
+        </div>
+        <div class="ml-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="cloudDropdown" v-if="!cloud"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="cloudDropdown" v-if="cloud"></i>
+        </div>
+      </div>
+
+      <div class="flex justify-between border-b-2  border-borderColor relative -top-3 p-6">
+        <div>
+          <span class="font-semibold text-md" @click.prevent="plusDropdown">Dropbox plus has has room for all your
+            content with space to spare</span>
+
+          <div v-if="plus" class="mt-4 sm:mt-0">
+
+            <p class="text-md py-2">Safeguard your photos, personal docs, work files, and much more. Save everything with
+              2,000 GB of space—and get some handy tools to help you stay organized.</p>
+            <p class="underline underline-offset-1 font-semibold mt-4">Learn more</p>
+          </div>
+        </div>
+        <div class="ml-3">
+          <i class="fa-solid fa-chevron-down text-xs" @click.prevent="plusDropdown" v-if="!plus"></i>
+          <i class="fa-solid fa-chevron-up text-xs" @click.prevent="plusDropdown" v-if="plus"></i>
+        </div>
+      </div>
+
+      </div>
+      <div class="w-1/2 mt-30">
+         <div v-if="cloud" class="bg-imgOneColor w-full py-16 px-7 relative -top-3 left-4">
+              <img src="../assets/img1.png" alt="basic hero" />
+        </div>
+        <div v-if="plus" class="bg-imgTwoColor py-16 px-7 mt-4">
+              <img src="../assets/file.png" alt="basic hero" />
+          </div>
       </div>
     </div>
   </section>
@@ -776,7 +809,10 @@ const vacationDropdown = () => {
 
 const plus = ref(false)
 const plusDropdown = () => {
-  plus.value = !plus.value
+  if(cloud.value){
+    cloud.value = false
+    plus.value = true
+  }
 }
 
 const show = ref(false)
@@ -809,9 +845,14 @@ const getAppDropdown = () => {
   getApp.value = !getApp.value
 }
 
-const cloud = ref(false)
+const cloud = ref(true)
 const cloudDropdown = () => {
-  cloud.value = !cloud.value
+  console.log(cloud.value)
+  if(cloud.value){
+    return
+  }else if(!cloud.value){
+    cloud.value = true
+  }
 }
 
 </script>
@@ -838,8 +879,7 @@ const cloudDropdown = () => {
     
 }
 .title-text {
-    font-size: 22px;
-    font-weight: 500;
+    
     font-family: 'BhuTuka Expanded One', cursive;
 }
 
