@@ -14,7 +14,9 @@
           </a>
         </div>
         <div class="flex justify-center">
-          <span class="mt-4 mx-2">Sign in</span>
+          <span class="mt-4 mx-2">
+            <router-link to="/login"> Sign in</router-link>
+          </span>
 
           <div @click.prevent="showMenu" class="flex md:hidden mx-2">
             <button type="button" v-if="!show" class="
@@ -199,7 +201,11 @@
 
         <div class="flex justify-between w-full ml-3 mb-12">
           <div class="mt-3">
-            <span class="text-sm">Sign up</span>
+            <span class="text-sm">
+                  <router-link to="/signup">Sign up</router-link>
+
+
+            </span>
           </div>
           <div class="m-3"></div>
         </div>

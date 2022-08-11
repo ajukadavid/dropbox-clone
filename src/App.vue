@@ -5,6 +5,7 @@ import BodyVue from './components/Body.vue';
 
 <template>
   <BodyVue/>
+  <router-view></router-view>
 </template>
 
 <style scoped>
