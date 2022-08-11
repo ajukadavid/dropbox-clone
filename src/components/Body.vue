@@ -772,8 +772,8 @@
       </div>
 
 
-      <Swiper :class="show ? 'hidden' : 'block'" />
-
+      <Swiper :class="show ? 'hidden' : 'block'" class="sm:hidden"/>
+      <desktopSwiper :class="show ? 'hidden' : 'block'" class="hidden sm:block"/>
       <div class="p-10">
         <p class="text-white text-4xl mb-4 font-extralight">For all things worth <br /> <span class="">Sharing</span>
         </p>
@@ -940,6 +940,7 @@
 import { ref } from 'vue'
 import Swiper from './Swiper.vue';
 import Navbar from './Navbar.vue';
+import desktopSwiper from './desktopSwiper.vue'
 
 const basic = ref(true)
 
