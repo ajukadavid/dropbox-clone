@@ -773,11 +773,14 @@
 
 
       <Swiper :class="show ? 'hidden' : 'block'" class="sm:hidden"/>
-      <desktopSwiper :class="show ? 'hidden' : 'block'" class="hidden sm:block"/>
-      <div class="p-10">
-        <p class="text-white text-4xl mb-4 font-extralight">For all things worth <br /> <span class="">Sharing</span>
+      <desktopSwiper :class="show ? 'hidden' : 'block'" class="hidden sm:block sm:m-10"/>
+      <div class="p-10 sm:flex sm:w-full sm:bg-red-500 sm:justify-between sm:flex-row">
+        <div class="sm:96">
+          <p class="text-white text-4xl mb-4 font-extralight">For all things worth <br /> <span class="">Sharing</span>
         </p>
-        <div class="w-full border-red-500 text-white mb-2 mt-6 p-5 flex justify-between bg-btnColor">
+        </div>
+        
+        <div class="w-full sm:w-1/4 border-red-500 text-white mb-2 mt-6 p-5 flex justify-between bg-btnColor">
           <span class="text-black text-md font-bold">Explore plans</span>
           <span class="text-black"><i class="fa-solid fa-arrow-right"></i></span>
 
