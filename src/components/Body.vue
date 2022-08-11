@@ -774,21 +774,19 @@
 
       <Swiper :class="show ? 'hidden' : 'block'" class="sm:hidden"/>
       <desktopSwiper :class="show ? 'hidden' : 'block'" class="hidden sm:block sm:m-10"/>
-      <div class="p-10 sm:flex sm:w-full sm:bg-red-500 sm:justify-between sm:flex-row">
-        <div class="sm:96">
-          <p class="text-white text-4xl mb-4 font-extralight">For all things worth <br /> <span class="">Sharing</span>
+      <div class="p-10 sm:flex sm:w-full  sm:flex-row">
+        <div class="sm:w-3/4 sm:flex sm:flex-row-reverse sm:mt-9 sm:mr-64">
+          <p class="text-white text-4xl mb-4 sm:text-6xl sm:font-base font-extralight">For all things worth <br class="sm:hidden"/> <span class="">Sharing.</span>
         </p>
         </div>
-        
-        <div class="w-full sm:w-1/4 border-red-500 text-white mb-2 mt-6 p-5 flex justify-between bg-btnColor">
-          <span class="text-black text-md font-bold">Explore plans</span>
-          <span class="text-black"><i class="fa-solid fa-arrow-right"></i></span>
-
+        <div class="w-full sm:w-1/4 border-red-500 text-white mb-2 mt-6 p-5 sm:pt-4 flex justify-between bg-btnColor">
+          <span class="text-black text-md font-bold sm:mt-3">Explore plans</span>
+          <span class="text-black sm:mt-3"><i class="fa-solid fa-arrow-right"></i></span>
         </div>
       </div>
     </section>
     <section :class="show ? 'hidden' : 'block'" class="bg-black relative w-full pb-5 p-3">
-      <div class="text-white flex flex-wrap">
+      <div class="text-white flex flex-wrap sm:grid sm:grid-cols-5">
         <ul class="p-8">
           <li class="mb-6 font-bold text-lg">
             Dropbox
