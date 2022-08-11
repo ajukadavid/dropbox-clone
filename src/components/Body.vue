@@ -704,13 +704,13 @@
         </div>
        <div class="sm:ml-20">
 
-        <p class="title-text mb-5 mt-4 font-extrabold sm:text-4xl"><span class="ml-12 sm:ml-0">Get more out of</span>
-          <br class="sm:hidden"/><span class="ml-2 sm:ml-0">Dropbox by connecting</span>
-          <br /><span class="ml-4 sm:ml-10"> with the tools you love</span>
+        <p class="title-text mb-5 mt-4 sm:mt-10 font-extrabold sm:text-4xl sm:ml-20"><span class="ml-12 sm:ml-0">Get more out of</span>
+          <br class="sm:hidden"/><span class="ml-2 sm:ml-0"> Dropbox by connecting</span>
+          <br /><span class="ml-4 sm:ml-40"> with the tools you love</span>
         </p>
        </div>
-        <span class="underline underline-offset-1 ml-10 font-light">Learn more about partner integrations</span>
-        <div class="p-3">
+        <span class="underline underline-offset-1 ml-10 font-light  integration">Learn more about partner integrations</span>
+        <div class="p-3 sm:grid sm:grid-cols-4 sm:gap-4 sm:p-10">
           <div class="mt-10">
             <img src="../assets/zoom.png" alt="zoom" class="w-12 mb-4" />
             <p class="font-bold text-md mb-4">Zoom</p>
@@ -758,15 +758,15 @@
 
     <section class="bg-bodyColor relative w-full" :class="show ? 'hidden' : 'block'">
       <div class="wrapper w-full">
-        <div class="mb-5">
-          <p class="title-text text-white mt-10">
-            <span class="ml-8">Trusted by over 700</span> <br />
-            <span class="">million registered users</span> <br />
-            <span class="ml-10"> and 600,000 teams
+        <div class="mb-5 sm:mt-10">
+          <p class="title-text text-white mt-10 sm:text-4xl sm:font-extrabold">
+            <span class="ml-8">Trusted by over 700</span> <br class="sm:hidden"/>
+            <span class="">million registered <br class="hidden sm:block"/> <span class="sm:ml-48">users</span></span> <br  class="sm:hidden"/>
+            <span class="ml-10 sm:ml-0"> and 600,000 teams
             </span>
 
           </p>
-          <p class="underline underline-offset-1 text-white ml-20 mt-4 mb-20">View more customer stories</p>
+          <p class="underline underline-offset-1 text-white ml-20 mt-4 mb-20 sm:ml-96">View more customer stories</p>
 
         </div>
       </div>
@@ -1195,5 +1195,12 @@ const cloudDropdown = () => {
 .title-text {
 
   font-family: 'BhuTuka Expanded One', cursive;
+}
+
+@media (min-width: 640px) { 
+  .integration {
+    
+    margin-left: 30em;
+  }
 }
 </style>
