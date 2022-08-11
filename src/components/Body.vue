@@ -785,136 +785,136 @@
         </div>
       </div>
     </section>
-    <section :class="show ? 'hidden' : 'block'" class="bg-black relative w-full pb-5 p-3">
-      <div class="text-white flex flex-wrap sm:grid sm:grid-cols-5">
+    <section :class="show ? 'hidden' : 'block'" class="bg-black relative w-full pb-5 p-3 sm:p-8">
+      <div class="text-white flex flex-wrap sm:grid sm:grid-cols-5 sm:gap-3">
         <ul class="p-8">
-          <li class="mb-6 font-bold text-lg">
+          <li class="mb-6 font-bold text-lg sm:text-xl">
             Dropbox
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Desktop app
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Mobile app
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Integrations
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Features
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Solutions
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm  my-2">
             Do more than store
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Security
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Advance access
           </li>
         </ul>
         <ul class="p-8">
-          <li class="mb-6 font-bold text-lg">
+          <li class="mb-6 font-bold text-lg sm:text-xl">
             Products
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Plus
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Professional
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Business
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Enterprise
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             HelloSign
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             DocSend
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Plans
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight  sm:text-sm my-2">
             Product updates
           </li>
         </ul>
         <ul class="p-8">
-          <li class="mb-6 font-bold text-lg">
+          <li class="mb-6 font-bold text-lg sm:text-xl">
             Support
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Help Center
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Contact us
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Privacy & Terms
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Cookie policy
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Cookies & CCPA preferences
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Sitemap
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Learning resources
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm  my-2">
             Advance access
           </li>
         </ul>
         <ul class="mt-8 -ml-5">
-          <li class="mb-6 font-bold text-lg">
+          <li class="mb-6 font-bold text-lg sm:text-xl">
             Community
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Blog
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Developers
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Community forums
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Refferals
           </li>
         </ul>
 
         <ul class="p-8">
-          <li class="mb-6 font-bold text-lg">
+          <li class="mb-6 font-bold text-lg sm:text-xl">
             Company
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             About us
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Jobs
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Investor relations
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             ESG
           </li>
-          <li class="text-xs font-extralight my-2">
+          <li class="text-xs font-extralight sm:text-sm my-2">
             Partners
           </li>
         </ul>
 
 
-        <hr />
+        <hr class="sm:hidden"/>
 
       </div>
 
