@@ -24,7 +24,9 @@ module.exports = {
       'officeColor': '#B4DC19',
       'sophiaColor': '#78286E',
       'glassColor': '#FFAFA5',
-      'lastColor': '#FAD24B'
+      'lastColor': '#FAD24B',
+      'inputColor': '#787878',
+      'signUpBtnColor': '#0C86EA'
       
     }
   },
