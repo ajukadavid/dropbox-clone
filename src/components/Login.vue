@@ -291,10 +291,8 @@ const login = async () => {
 const loginGoogle = async () => {
   const provider = new GoogleAuthProvider();
   signInWithPopup(auth, provider).then(() => {
-    console.log("User signed in");
     router.push("/home");
   }).catch((error) => {
-      console.log(error);
       switch (error.code) {
         default:
           errMsg.value = "There was a problem loggin in";
