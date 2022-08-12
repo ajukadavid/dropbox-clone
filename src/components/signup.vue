@@ -18,10 +18,13 @@
             <input type="text" class="w-full p-4 rounded-lg" placeholder="Password" />
         </form>
         <p> <input type="checkbox" class="ml-5 p-8" />
-        I agree to the <span class="underline underline-offset-1 text-blue-400">Dropbox Terms.</span> Learn about how we <p class="ml-12">use and protect your data in our <span class="underline underline-offset-1 text-blue-400">Privacy policy</span></p>
-        
+            I agree to the <span class="underline underline-offset-1 text-blue-400">Dropbox Terms.</span> Learn about
+            how we
+        <p class="ml-12">use and protect your data in our <span
+                class="underline underline-offset-1 text-blue-400">Privacy policy</span></p>
+
         </p>
-         <div class="px-10 mx-5 p-4 mt-5 bg-blue-600">
+        <div class="px-10 mx-5 p-4 mt-5 bg-blue-600">
             <button class="text-white ml-16">Create an account</button>
         </div>
         <p class="text-blue-500 ml-28 mt-5">I already have an account</p>
@@ -35,30 +38,33 @@
         </div>
     </div>
     <div class="hidden sm:flex">
-       <header class="sticky top-0 z-50 p-3 shadow-md w-100 header"> 
-        <div class="flex justify-between ">
-            <div class="border-2 border-blue-400 px-3 mx-28 rounded-md">
-                <p class="text-xs text-blue-600 font-bold mt-5">Try Dropbox Business</p>
+        <header class="sticky top-0 z-50 p-3 shadow-md w-100 header">
+            <div class="flex justify-between ">
+                <div class="border-2 border-blue-400 px-3 mx-28 rounded-md">
+                    <p class="text-xs text-blue-600 font-bold mt-5">Try Dropbox Business</p>
+                </div>
+                <div class="flex mr-36 m-3">
+                    <img src="../assets/loginLogo.png" class="mr-3 desktop-logo" />
+                    <p class="font-bold text-3xl">Dropbox</p>
+                </div>
+                <div class="mt-5 mx-28">
+                    <h5 class="text-blue-600">Download the app</h5>
+                </div>
             </div>
-            <div class="flex mr-36 m-3">
-                <img src="../assets/loginLogo.png" class="mr-3 desktop-logo" />
-                <p class="font-bold text-3xl">Dropbox</p>
-            </div>
-            <div class="mt-5 mx-28">
-                <h5 class="text-blue-600">Download the app</h5>
-            </div>
-        </div>
-       </header>
+        </header>
 
-       <main class=relative>
-        <div>
-                
-        </div>
-        <div>
+        <main class="relative">
+            <div class="flex">
+                <div>
+                    <img src="../assets/createAccount.png" class="img-logo" />
+                </div>
+                <div>
 
-        </div>
-       </main>
-   <footer></footer>
+                </div>
+            </div>
+
+        </main>
+        <footer></footer>
     </div>
 </template>
 
