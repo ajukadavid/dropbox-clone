@@ -37,7 +37,7 @@
             <input type="text" class="w-full p-4 rounded-lg" v-model="password" placeholder="Password" />
         </form>
         <p class=" mb-4 ml-4 text-red-500">{{errMsg}}</p>
-        <p> <input type="checkbox" class="ml-5 p-8" />
+        <p> <input type="checkbox" class="ml-5 p-2" />
             <span class="p-2 text-sm">Remember me</span>
         </p>
         <div class="px-10 mx-5 p-4 mt-5 bg-blue-600" @click.prevent="login">
