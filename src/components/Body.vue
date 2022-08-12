@@ -220,8 +220,7 @@
       <div class="wrapper w-full">
         <div class="p-9 sm:w-full">
           <div class=" sm:flex sm:items-center sm:flex-col">
-            <p class="title-text text-xl sm:text-4xl font-extrabold text-white mb-4 mt-20">More inspiration, less <br
-                class="sm:hidden" /><span class="ml-14 sm:ml-0">interruption</span>
+            <p class="title-text text-xl sm:text-4xl font-extrabold text-white mb-4 mt-20">More inspiration, less <br class="sm:hidden" /><span class="ml-0 sm:ml-0">interruption</span>
             </p>
 
             <p class="text-white text-lg sm:text-base">Dropbox lets you simplify your workflow. <br class="sm:hidden" />
