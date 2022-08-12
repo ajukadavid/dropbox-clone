@@ -20,7 +20,7 @@
                 <span class="text-black ml-14 text-md">Sign in with Apple</span>
             </div>
         </div>
-        <div class="flex mx-6 mt-8 w-36 p-4">
+        <div class="flex mx-6 mt-8 w-36 pr-4">
             <div>
                 <hr class="mr-8  w-36 border-black">
             </div>
