@@ -762,14 +762,14 @@
     <section class="bg-bodyColor relative w-full" :class="show ? 'hidden' : 'block'">
       <div class="wrapper w-full">
         <div class="mb-5 sm:mt-10">
-          <p class="title-text text-white mt-10 sm:text-4xl sm:font-extrabold">
+          <p class="title-text text-white mt-10 sm:text-4xl font-extrabold">
             <span class="ml-8">Trusted by over 700</span> <br class="sm:hidden"/>
             <span class="">million registered <br class="hidden sm:block"/> <span class="sm:ml-48">users</span></span> <br  class="sm:hidden"/>
             <span class="ml-10 sm:ml-0"> and 600,000 teams
             </span>
 
           </p>
-          <p class="underline underline-offset-1 text-white ml-20 mt-4 mb-20 sm:ml-96">View more customer stories</p>
+          <p class="underline underline-offset-1 text-white ml-16 mt-4 mb-20 sm:ml-96">View more customer stories</p>
 
         </div>
       </div>
