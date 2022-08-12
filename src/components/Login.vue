@@ -8,25 +8,42 @@
             <span>Get the best Dropbox experience on-the-go, for free!</span>
         </div>
         <div class="px-10 mx-5 p-4 bg-green-600">
-            <span class="text-white ml-16">Download android app</span>
+            <span class="text-white ml-16 font-semibold">Download android app</span>
         </div>
-
+            <div>
+                <div class="px-10 mx-5 p-3 cursor-pointer mt-8 bg-white flex border-black border-4">
+                        <span class="text-black  border-r-black"><img class="w-5 h-5" src="../assets/google.png"/></span>
+                        <span class="text-black ml-14 text-md">Sign in with Google</span>
+                    </div>
+                <div class="px-10 mx-5 p-3 cursor-pointer mt-8 bg-white flex border-black border-4">
+                        <span class="text-black border-r-black"><img class="w-6 h-6" src="../assets/apple.png"/></span>
+                        <span class="text-black ml-14 text-md">Sign in with Apple</span>
+                 </div>
+            </div>
+            <div class="flex mx-6 mt-8 w-36">
+                <div>
+                <hr class="mr-8  w-36 border-black">
+                </div>
+                <div class="-mt-2 mr-2">
+                      <p class="pb-4 text-sm">or</p>
+                </div>
+                <div>
+                    <hr class=" mx-4 w-36 border-black">
+                </div>
+            </div>
+            
         <form class="m-5 border">
             <input type="text" class="w-full p-4 rounded-lg" placeholder="Email" />
             <input type="text" class="w-full p-4 rounded-lg" placeholder="Password" />
         </form>
         <p> <input type="checkbox" class="ml-5 p-8" />
-            I agree to the <span class="underline underline-offset-1 text-blue-400">Dropbox Terms.</span> Learn about
-            how we
-        <p class="ml-12">use and protect your data in our <span
-                class="underline underline-offset-1 text-blue-400">Privacy policy</span></p>
-
+        <span class="p-2 text-sm">Remember me</span>
         </p>
         <div class="px-10 mx-5 p-4 mt-5 bg-blue-600">
-            <button class="text-white ml-16">Create an account</button>
+            <button class="text-white ml-16">Sign in</button>
         </div>
-        <p class="text-blue-500 ml-28 mt-5">I already have an account</p>
-
+        <p class="text-blue-500 text-sm ml-5 mt-2">Forgot your password?</p>
+        <p class=" text-sm ml-36 mt-2">(or <span class="text-blue-500"><a href="/signup">Create an account</a></span>)</p>
         <div class="border-t-2 flex justify-between mt-4 p-2">
             <div></div>
             <div>
