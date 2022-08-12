@@ -12,8 +12,6 @@
         </div>
 
         <form class="m-5 border">
-            <input type="text" class="w-full p-4 rounded-lg" placeholder="First name" />
-            <input type="text" class="w-full p-4 rounded-lg" placeholder="Last name" />
             <input type="text" class="w-full p-4 rounded-lg" placeholder="Email" />
             <input type="text" class="w-full p-4 rounded-lg" placeholder="Password" />
         </form>
