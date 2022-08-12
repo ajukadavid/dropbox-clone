@@ -3,7 +3,7 @@
 <template>
   <Navbar class="hidden sm:flex" />
   <div class="">
-    <nav class="sm:hidden">
+    <nav class="sm:hidden sticky top-0 z-50">
       <div class="flex justify-between">
         <div class="flex">
           <a href="#">
@@ -36,6 +36,8 @@
         </div>
       </div>
       <div :class="show ? 'block' : 'hidden'" class="bg-navColor mt-0 p-4 h-screen -top-5">
+      <div class="flex flex-col justify-between">
+      <div>
         <div class="flex justify-between w-full ml-3 ">
           <div class="mt-3">
             <span class="text-sm ">Why Dropbox</span>
@@ -180,8 +182,6 @@
             <i class="fa-solid fa-chevron-up text-xs" @click.prevent="contactDropdown" v-if="contact"></i>
           </div>
         </div>
-
-
         <div class="flex justify-between w-full ml-3 ">
           <div class="mt-3">
             <span class="text-sm">Get app</span>
@@ -198,7 +198,6 @@
             <i class="fa-solid fa-chevron-up text-xs" @click.prevent="getAppDropdown" v-if="getApp"></i>
           </div>
         </div>
-
         <div class="flex justify-between w-full ml-3 mb-12">
           <div class="mt-3">
             <span class="text-sm">
@@ -207,11 +206,12 @@
           </div>
           <div class="m-3"></div>
         </div>
-        <div class="w-full  text-white h-20 mb-2 p-6 flex justify-between bg-blue-700">
+      </div>
+      <div class="w-full r text-white h-20 mb-2 p-6 flex justify-between bg-blue-700">
           <span class="text-white">Get started</span>
           <span class="text-white"><i class="fa-solid fa-arrow-right"></i></span>
-
-        </div>
+      </div>
+</div>
       </div>
     </nav>
 
