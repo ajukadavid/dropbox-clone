@@ -35,7 +35,7 @@
           </div>
         </div>
       </div>
-      <div :class="show ? 'block' : 'hidden'" class="bg-navColor mt-0 p-4 -top-5">
+      <div :class="show ? 'block' : 'hidden'" class="bg-navColor mt-0 p-4 h-screen -top-5">
         <div class="flex justify-between w-full ml-3 ">
           <div class="mt-3">
             <span class="text-sm ">Why Dropbox</span>
