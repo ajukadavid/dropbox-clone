@@ -2,10 +2,13 @@ import { createApp } from 'vue'
 import './styles/app.css'; // Here
 import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
-
 import Login from '../src/components/Login.vue'
 import signup from '../src/components/signup.vue'
 import Body from '../src/components/Body.vue'
+
+
+
+
 
 const router = createRouter({
     history: createWebHistory(),
@@ -16,11 +19,6 @@ const router = createRouter({
     ]
 })
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-
-import { faHatWizard } from '@fortawesome/free-solid-svg-icons'
-
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const app = createApp(App)
 

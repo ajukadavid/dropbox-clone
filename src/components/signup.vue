@@ -74,12 +74,14 @@
                         </div>
                         <div class="flex flex-col">
                             <label for="Email" class="text-inputColor">Email</label>
-                            <input type="text" class=" p-1 rounded-md border border-black w-80" /> <br />
+                            <input type="text"  v-model="email"  class=" p-1 rounded-md border border-black w-80" /> <br />
                         </div>
                         <div class="flex flex-col">
                             <label for="Password" class="text-inputColor">Password</label>
-                            <input type="password" class=" p-1 rounded-md border border-black w-80" /> <br />
+                            <input type="password" v-model="password"  class=" p-1 rounded-md border border-black w-80" /> <br />
                         </div>
+                        
+                        <p class="ml-10 text-red-500">{{errMsg}}</p>
                     </form>
                     <p> <input type="checkbox" class="ml-5 p-8" />
                         I agree to the <span class="underline underline-offset-1 text-blue-400">Dropbox Terms.</span>
@@ -90,16 +92,14 @@
 
                     </p>
                     <div class="px-10 mx-5 p-1 cursor-pointer mt-5 bg-signUpBtnColor">
-                        <button class="text-white ml-20 text-sm">Create an account</button>
+                        <button class="text-white ml-20 text-sm" @click.prevent="register">Create aan account</button>
                     </div>
-
                      <div class="px-10 mx-5 p-1 cursor-pointer mt-8 bg-blue-500">
                         <span class="text-white mr-4  border-r-black"><i class="fa-brands fa-google"></i></span>
                         <span class="text-white ml-10 text-sm">Sign up with Google</span>
                     </div>
                 </div>
 
-        
     </div>
     
         </main>
@@ -212,7 +212,50 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+import { useRouter } from 'vue-router';
+import { auth } from '../firebase/firebase'
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from 'firebase/auth'
 
+
+const router = useRouter();
+const email = ref('')
+const password = ref('')
+const firstName = ref('')
+const lastName = ref('')
+const errMsg = ref('')
+
+const register = async () => {
+   await createUserWithEmailAndPassword(auth, email.value, password.value)
+   .then((user) => {
+    if(user){
+        updateProfile(auth.currentUser!, {
+            displayName: '',
+            photoURL: ''
+        })
+        sendEmailVerification(auth.currentUser!)
+        router.push('/')
+    }
+   })
+   .catch((error) =>{
+                    console.log(error);
+                    
+                     switch (error.code) {
+                        case 'auth/invalid-email':
+                            errMsg.value = 'The email address is badly formatted.'
+                            break
+                        case 'auth/email-already-exists':
+                            errMsg.value = 'The email address is already in use by another account.'
+                            break
+                        case 'auth/weak-password':
+                            errMsg.value = 'The password must be 6 characters long or more.'
+                            break
+                        default:
+                            errMsg.value = 'There was a problem creating the account.'
+                            break
+                    }
+   })
+}
 </script>
 
 
