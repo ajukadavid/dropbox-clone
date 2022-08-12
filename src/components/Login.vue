@@ -28,7 +28,7 @@
                 <p class="pb-4 text-sm">or</p>
             </div>
             <div>
-                <hr class=" mx-4 w-36 border-black">
+                <hr class=" mx-4 w-32 border-black">
             </div>
         </div>
 
