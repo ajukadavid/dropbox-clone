@@ -1,11 +1,8 @@
 <script setup lang="ts">
-
-import BodyVue from './components/Body.vue';
 </script>
 
 <template>
-  <BodyVue/>
-  <router-view></router-view>
+ <router-view></router-view> 
 </template>
 
 <style scoped>

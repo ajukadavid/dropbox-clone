@@ -147,10 +147,10 @@
                 </ul>
             </li>
 
-            <li class="main-list-item mt-3"><a href="#">Sign up</a>
+            <li class="main-list-item mt-3"><a href="/signup">Sign up</a>
                
             </li>
-             <li class="main-list-item mt-3"><a href="#">Sign in</a>
+             <li class="main-list-item mt-3"><a href="/login">Sign in</a>
                 
             </li>
             <li class="main-list-item"><a href="#">
