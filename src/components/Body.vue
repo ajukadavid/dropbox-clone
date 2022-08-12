@@ -15,7 +15,7 @@
         </div>
         <div class="flex justify-center">
           <span class="mt-4 mx-2">
-            <router-link to="/login"> Sign in</router-link>
+            <p @click.prevent="handleSignOut"> Sign Out</p>
           </span>
 
           <div @click.prevent="showMenu" class="flex md:hidden mx-2">
@@ -203,8 +203,6 @@
           <div class="mt-3">
             <span class="text-sm">
                   <router-link to="/signup">Sign up</router-link>
-
-
             </span>
           </div>
           <div class="m-3"></div>
@@ -945,11 +943,24 @@
 <script setup lang="ts">
 
 import { ref } from 'vue'
+import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 import Swiper from './Swiper.vue';
 import Navbar from './Navbar.vue';
 import desktopSwiper from './desktopSwiper.vue'
+import { useRouter } from "vue-router";
+
+
+
+const router = useRouter();
+let auth = getAuth();
 
 const basic = ref(true)
+
+const handleSignOut = () => {
+  signOut(auth).then(() => {
+    router.push("/");
+  });
+};
 
 const basicDropdown = () => {
   if (basic.value === false) {

@@ -14,8 +14,8 @@
         <form class="m-5 border">
             <input type="text" class="w-full p-4 rounded-lg" placeholder="First name" />
             <input type="text" class="w-full p-4 rounded-lg" placeholder="Last name" />
-            <input type="text" class="w-full p-4 rounded-lg" placeholder="Email" />
-            <input type="text" class="w-full p-4 rounded-lg" placeholder="Password" />
+            <input type="text" class="w-full p-4 rounded-lg" v-model="email" placeholder="Email" />
+            <input type="text" class="w-full p-4 rounded-lg" v-model="password" placeholder="Password" />
         </form>
         <p> <input type="checkbox" class="ml-5 p-8" />
             I agree to the <span class="underline underline-offset-1 text-blue-400">Dropbox Terms.</span> Learn about
@@ -24,7 +24,7 @@
                 class="underline underline-offset-1 text-blue-400">Privacy policy</span></p>
 
         </p>
-        <div class="px-10 mx-5 p-4 mt-5 bg-blue-600">
+        <div class="px-10 mx-5 p-4 mt-5 bg-blue-600" @click.prevent="register">
             <button class="text-white ml-16">Create an account</button>
         </div>
         <p class="text-blue-500 ml-28 mt-5">I already have an account</p>
@@ -61,7 +61,7 @@
                 <div class="mt-20 ml-10">
                     <div class="flex justify-between w-80 ml-10 mb-5">
                         <span>Create an account</span>
-                        <a href="/login"><p>or <span class="text-blue-500">log in </span></p></a>
+                        <a href="/"><p>or <span class="text-blue-500">log in </span></p></a>
                     </div>
                     <form class="ml-10">
                         <div class="flex flex-col">
@@ -81,7 +81,7 @@
                             <input type="password" v-model="password"  class=" p-1 rounded-md border border-black w-80" /> <br />
                         </div>
                         
-                        <p class="ml-10 text-red-500">{{errMsg}}</p>
+                        <p class=" mb-4 text-red-500">{{errMsg}}</p>
                     </form>
                     <p> <input type="checkbox" class="ml-5 p-8" />
                         I agree to the <span class="underline underline-offset-1 text-blue-400">Dropbox Terms.</span>
@@ -92,7 +92,7 @@
 
                     </p>
                     <div class="px-10 mx-5 p-1 cursor-pointer mt-5 bg-signUpBtnColor">
-                        <button class="text-white ml-20 text-sm" @click.prevent="register">Create aan account</button>
+                        <button class="text-white ml-20 text-sm" @click.prevent="register">Create an account</button>
                     </div>
                      <div class="px-10 mx-5 p-1 cursor-pointer mt-8 bg-blue-500">
                         <span class="text-white mr-4  border-r-black"><i class="fa-brands fa-google"></i></span>
@@ -234,7 +234,7 @@ const register = async () => {
             photoURL: ''
         })
         sendEmailVerification(auth.currentUser!)
-        router.push('/')
+        router.push('/home')
     }
    })
    .catch((error) =>{

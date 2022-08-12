@@ -150,7 +150,7 @@
             <li class="main-list-item mt-3"><a href="/signup">Sign up</a>
                
             </li>
-             <li class="main-list-item mt-3"><a href="/login">Sign in</a>
+             <li class="main-list-item mt-3"><a @click.prevent="handleSignOut">Sign Out</a>
                 
             </li>
             <li class="main-list-item"><a href="#">
@@ -167,6 +167,25 @@
 </div>
 
 </template>
+
+<script setup lang="ts">
+
+import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
+import { useRouter } from "vue-router";
+
+
+
+const router = useRouter();
+let auth = getAuth();
+
+
+const handleSignOut = () => {
+  signOut(auth).then(() => {
+    router.push("/");
+  });
+};
+
+</script>
 
 <style  scoped>
 a {

@@ -13,8 +13,8 @@ import Body from '../src/components/Body.vue'
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/', component: Body },
-        { path: '/login', name:'Login', component: Login },
+        { path: '/', component: Login },
+        { path: '/home', name:'Login', component: Body },
         { path: '/signup', name:'Sign Up', component: signup },
     ]
 })

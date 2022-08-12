@@ -13,7 +13,7 @@
         <div>
             <div class="px-10 mx-5 p-3 cursor-pointer mt-8 bg-white flex border-black border-4">
                 <span class="text-black  border-r-black"><img class="w-5 h-5" src="../assets/google.png" /></span>
-                <span class="text-black ml-14 text-md">Sign in with Google</span>
+                <span class="text-black ml-14 text-md"  @click.prevent="loginGoogle">Sign in with Google</span>
             </div>
             <div class="px-10 mx-5 p-3 cursor-pointer mt-8 bg-white flex border-black border-4">
                 <span class="text-black border-r-black"><img class="w-6 h-6" src="../assets/apple.png" /></span>
@@ -33,14 +33,15 @@
         </div>
 
         <form class="m-5 border">
-            <input type="text" class="w-full p-4 rounded-lg" placeholder="Email" />
-            <input type="text" class="w-full p-4 rounded-lg" placeholder="Password" />
+            <input type="text" class="w-full p-4 rounded-lg" v-model="email" placeholder="Email" />
+            <input type="text" class="w-full p-4 rounded-lg" v-model="password" placeholder="Password" />
         </form>
+        <p class=" mb-4 ml-4 text-red-500">{{errMsg}}</p>
         <p> <input type="checkbox" class="ml-5 p-8" />
             <span class="p-2 text-sm">Remember me</span>
         </p>
-        <div class="px-10 mx-5 p-4 mt-5 bg-blue-600">
-            <button class="text-white ml-16">Sign in</button>
+        <div class="px-10 mx-5 p-4 mt-5 bg-blue-600" @click.prevent="login">
+            <button class="text-white ml-28">Sign in</button>
         </div>
         <p class="text-blue-500 text-sm ml-5 mt-2">Forgot your password?</p>
         <p class=" text-sm ml-36 mt-2">(or <span class="text-blue-500"><a href="/signup">Create an account</a></span>)
@@ -77,14 +78,14 @@
                 <div class="mt-20 ml-10">
                     <div class="flex justify-between w-80 ml-12">
                         <span class="text-xl">Sign in</span>
-                        <p>or <span class="text-blue-500 cursor-pointer text-sm">create account</span></p>
+                        <p>or <router-link to="/signup" class="text-blue-500 cursor-pointer text-sm">create account</router-link></p>
                     </div>
 
                     <div class="ml-8">
                         <div class="px-10 mx-5 p-3 cursor-pointer mt-8 bg-white flex border-black border-4">
                             <span class="text-black  border-r-black"><img class="w-5 h-5"
                                     src="../assets/google.png" /></span>
-                            <span class="text-black ml-14 text-md">Sign in with Google</span>
+                            <span class="text-black ml-14 text-md" @click.prevent="loginGoogle">Sign in with Google</span>
                         </div>
                         <div class="px-10 mx-5 p-3 cursor-pointer mt-8 bg-white flex border-black border-4">
                             <span class="text-black border-r-black"><img class="w-6 h-6"
@@ -107,19 +108,20 @@
 
                         <div class="flex flex-col">
                             <label for="Email" class="text-inputColor">Email</label>
-                            <input type="text" class=" p-1 rounded-md border border-black w-80" /> <br />
+                            <input type="text" v-model="email" class=" p-1 rounded-md border border-black w-80" /> <br />
                         </div>
                         <div class="flex flex-col">
                             <label for="Password" class="text-inputColor">Password</label>
-                            <input type="password" class=" p-1 rounded-md border border-black w-80" /> <br />
+                            <input type="password" v-model="password" class=" p-1 rounded-md border border-black w-80" /> <br />
                         </div>
+                        <p class=" mb-4 text-red-500">{{errMsg}}</p>
                     </form>
                     <div class="flex justify-between ml-4">
                         <p> <input type="checkbox" class="ml-5 p-8" />
                             <span class="p-2 text-sm">Remember me</span>
 
                         </p>
-                        <div class="mx-5 p-1 px-3 cursor-pointer bg-signUpBtnColor">
+                        <div class="mx-5 p-1 px-3 cursor-pointer bg-signUpBtnColor" @click.prevent="login">
                             <button class="text-white text-sm">Sign in</button>
                         </div>
                     </div>
@@ -244,6 +246,62 @@
 </template>
 
 <script setup lang="ts">
+
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
+
+
+const auth = getAuth();
+const router = useRouter();
+
+const email = ref("");
+const password = ref("");
+const errMsg = ref("");
+
+const login = async () => {
+  await signInWithEmailAndPassword(auth, email.value, password.value)
+    .then((user) => {
+      router.push("/home");
+    })
+    .catch((error) => {
+      switch (error.code) {
+        case "auth/invalid-email":
+          errMsg.value = "Invalid email";
+          break;
+        case "auth/user-not-found":
+          errMsg.value = "No account with that email was found";
+          break;
+        case "auth/wrong-password":
+          errMsg.value = "Incorrect password";
+          break;
+        default:
+          errMsg.value = "Email or password was incorrect";
+          break;
+      }
+    });
+};
+
+
+const loginGoogle = async () => {
+  const provider = new GoogleAuthProvider();
+  signInWithPopup(auth, provider).then(() => {
+    console.log("User signed in");
+    router.push("/home");
+  }).catch((error) => {
+      console.log(error);
+      switch (error.code) {
+        default:
+          errMsg.value = "There was a problem loggin in";
+          break;
+      }
+    });
+};
 
 </script>
 
