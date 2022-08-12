@@ -33,8 +33,8 @@
         </div>
 
         <form class="m-5 border">
-            <input type="text" class="w-full p-4 rounded-lg" v-model="email" placeholder="Email" />
-            <input type="text" class="w-full p-4 rounded-lg" v-model="password" placeholder="Password" />
+            <input type="text" class="w-full p-4 rounded-lg mb-1" v-model="email" placeholder="Email" />
+            <input type="text" class="w-full p-4 rounded-lg mb-1" v-model="password" placeholder="Password" />
         </form>
         <p class=" mb-4 ml-4 text-red-500">{{errMsg}}</p>
         <p> <input type="checkbox" class="ml-5 p-2" />
