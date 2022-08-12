@@ -8,7 +8,7 @@
             <span>Get the best Dropbox experience on-the-go, for free!</span>
         </div>
         <div class="px-10 mx-5 p-4 bg-green-600">
-            <span class="text-white ml-16 font-semibold">Download android app</span>
+            <span class="text-white ml-14 font-semibold">Download android app</span>
         </div>
         <div>
             <div class="px-10 mx-5 p-3 cursor-pointer mt-8 bg-white flex border-black border-4">
