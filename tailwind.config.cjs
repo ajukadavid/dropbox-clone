@@ -26,7 +26,8 @@ module.exports = {
       'glassColor': '#FFAFA5',
       'lastColor': '#FAD24B',
       'inputColor': '#787878',
-      'signUpBtnColor': '#0C86EA'
+      'signUpBtnColor': '#0C86EA',
+      'mobileLogin': '#F6F9FC'
       
     }
   },

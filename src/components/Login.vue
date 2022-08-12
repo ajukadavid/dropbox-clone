@@ -1,5 +1,5 @@
 <template>
-    <div class="sm:hidden">
+    <div class="sm:hidden bg-mobileLogin">
         <div class="flex mt-5 ml-20 mb-3">
             <img src="../assets/loginLogo.png" class="img-logo mx-2" />
             <h2>Create a Dropbox account</h2>
@@ -10,40 +10,41 @@
         <div class="px-10 mx-5 p-4 bg-green-600">
             <span class="text-white ml-16 font-semibold">Download android app</span>
         </div>
+        <div>
+            <div class="px-10 mx-5 p-3 cursor-pointer mt-8 bg-white flex border-black border-4">
+                <span class="text-black  border-r-black"><img class="w-5 h-5" src="../assets/google.png" /></span>
+                <span class="text-black ml-14 text-md">Sign in with Google</span>
+            </div>
+            <div class="px-10 mx-5 p-3 cursor-pointer mt-8 bg-white flex border-black border-4">
+                <span class="text-black border-r-black"><img class="w-6 h-6" src="../assets/apple.png" /></span>
+                <span class="text-black ml-14 text-md">Sign in with Apple</span>
+            </div>
+        </div>
+        <div class="flex mx-6 mt-8 w-36">
             <div>
-                <div class="px-10 mx-5 p-3 cursor-pointer mt-8 bg-white flex border-black border-4">
-                        <span class="text-black  border-r-black"><img class="w-5 h-5" src="../assets/google.png"/></span>
-                        <span class="text-black ml-14 text-md">Sign in with Google</span>
-                    </div>
-                <div class="px-10 mx-5 p-3 cursor-pointer mt-8 bg-white flex border-black border-4">
-                        <span class="text-black border-r-black"><img class="w-6 h-6" src="../assets/apple.png"/></span>
-                        <span class="text-black ml-14 text-md">Sign in with Apple</span>
-                 </div>
-            </div>
-            <div class="flex mx-6 mt-8 w-36">
-                <div>
                 <hr class="mr-8  w-36 border-black">
-                </div>
-                <div class="-mt-2 mr-2">
-                      <p class="pb-4 text-sm">or</p>
-                </div>
-                <div>
-                    <hr class=" mx-4 w-36 border-black">
-                </div>
             </div>
-            
+            <div class="-mt-2 mr-2">
+                <p class="pb-4 text-sm">or</p>
+            </div>
+            <div>
+                <hr class=" mx-4 w-36 border-black">
+            </div>
+        </div>
+
         <form class="m-5 border">
             <input type="text" class="w-full p-4 rounded-lg" placeholder="Email" />
             <input type="text" class="w-full p-4 rounded-lg" placeholder="Password" />
         </form>
         <p> <input type="checkbox" class="ml-5 p-8" />
-        <span class="p-2 text-sm">Remember me</span>
+            <span class="p-2 text-sm">Remember me</span>
         </p>
         <div class="px-10 mx-5 p-4 mt-5 bg-blue-600">
             <button class="text-white ml-16">Sign in</button>
         </div>
         <p class="text-blue-500 text-sm ml-5 mt-2">Forgot your password?</p>
-        <p class=" text-sm ml-36 mt-2">(or <span class="text-blue-500"><a href="/signup">Create an account</a></span>)</p>
+        <p class=" text-sm ml-36 mt-2">(or <span class="text-blue-500"><a href="/signup">Create an account</a></span>)
+        </p>
         <div class="border-t-2 flex justify-between mt-4 p-2">
             <div></div>
             <div>
@@ -74,19 +75,36 @@
                     <img src="../assets/createAccount.png" class="" />
                 </div>
                 <div class="mt-20 ml-10">
-                    <div class="flex justify-between w-80 ml-10 mb-5">
-                        <span>Create an account</span>
-                        <p>or <span class="text-blue-500">log in </span></p>
+                    <div class="flex justify-between w-80 ml-12">
+                        <span class="text-xl">Sign in</span>
+                        <p>or <span class="text-blue-500 cursor-pointer text-sm">create account</span></p>
+                    </div>
+
+                    <div class="ml-8">
+                        <div class="px-10 mx-5 p-3 cursor-pointer mt-8 bg-white flex border-black border-4">
+                            <span class="text-black  border-r-black"><img class="w-5 h-5"
+                                    src="../assets/google.png" /></span>
+                            <span class="text-black ml-14 text-md">Sign in with Google</span>
+                        </div>
+                        <div class="px-10 mx-5 p-3 cursor-pointer mt-8 bg-white flex border-black border-4">
+                            <span class="text-black border-r-black"><img class="w-6 h-6"
+                                    src="../assets/apple.png" /></span>
+                            <span class="text-black ml-14 text-md">Sign in with Apple</span>
+                        </div>
+                    </div>
+                    <div class="flex mx-6 mt-8 w-36">
+                        <div>
+                            <hr class="mr-8  w-36 border-black">
+                        </div>
+                        <div class="-mt-2 mr-2">
+                            <p class="pb-4 text-sm">or</p>
+                        </div>
+                        <div>
+                            <hr class=" mx-4 w-36 border-black">
+                        </div>
                     </div>
                     <form class="ml-10">
-                        <div class="flex flex-col">
-                            <label for="First Name" class="text-inputColor">First name</label>
-                            <input type="text" class=" p-1 rounded-md border border-black w-80" /> <br />
-                        </div>
-                        <div class="flex flex-col">
-                            <label for="Last name" class="text-inputColor">Last name</label>
-                            <input type="text" class=" p-1 rounded-md border border-black w-80" /> <br />
-                        </div>
+
                         <div class="flex flex-col">
                             <label for="Email" class="text-inputColor">Email</label>
                             <input type="text" class=" p-1 rounded-md border border-black w-80" /> <br />
@@ -96,132 +114,131 @@
                             <input type="password" class=" p-1 rounded-md border border-black w-80" /> <br />
                         </div>
                     </form>
-                    <p> <input type="checkbox" class="ml-5 p-8" />
-                        I agree to the <span class="underline underline-offset-1 text-blue-400">Dropbox Terms.</span>
-                        Learn about
-                        how we
-                    <p class="ml-12">use and protect your data in our <span
-                            class="underline underline-offset-1 text-blue-400">Privacy policy</span></p>
+                    <div class="flex justify-between ml-4">
+                        <p> <input type="checkbox" class="ml-5 p-8" />
+                            <span class="p-2 text-sm">Remember me</span>
 
-                    </p>
-                    <div class="px-10 mx-5 p-1 cursor-pointer mt-5 bg-signUpBtnColor">
-                        <button class="text-white ml-20 text-sm">Create an account</button>
+                        </p>
+                        <div class="mx-5 p-1 px-3 cursor-pointer bg-signUpBtnColor">
+                            <button class="text-white text-sm">Sign in</button>
+                        </div>
                     </div>
 
-                     <div class="px-10 mx-5 p-1 cursor-pointer mt-8 bg-blue-500">
-                        <span class="text-white mr-4  border-r-black"><i class="fa-brands fa-google"></i></span>
-                        <span class="text-white ml-10 text-sm">Sign up with Google</span>
+
+
+                    <div class=" p-1 cursor-pointer ">
+                        <span class="text-blue-500 ml-8 text-sm">Forgot your password</span>
                     </div>
                 </div>
 
-        
-    </div>
-    
+
+            </div>
+
         </main>
         <footer>
             <div class="mx-40">
-             <hr class="text-red-500 mb-20 w-full"/>
+                <hr class="text-red-500 mb-20 w-full" />
             </div>
 
-<section class="bg-white relative mx-40  p-3 ">
-      <div class="text-inputColor flex flex-wrap sm:grid sm:grid-cols-5 sm:gap-3">
-        <ul class="p-8">
-          <li class="mb-2 font-bold text-xs sm:text-sm">
-            Dropbox
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Install
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Mobile 
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Pricing
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Business
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline ">
-            Enterprise
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline ">
-           Features
-          </li>
-        </ul>
-      <ul class="p-8">
-          <li class="mb-2 font-bold text-xs sm:text-sm">
-            About us
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Dropbox Blog
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            About
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Branding
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            News
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline ">
-            Jobs
-          </li>
-        </ul>
-         <ul class="p-8">
-          <li class="mb-2 font-bold text-xs sm:text-sm">
-            Support
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Help Center
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Contact us
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Copyright
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Cookie Policy
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline ">
-            Cookies & CCPA preferences
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline ">
-            Privacy & Terms
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline ">
-            Sitemap
-          </li>
-        </ul>
-        <ul class="p-8">
-          <li class="mb-2 font-bold text-xs sm:text-sm">
-            Community
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Refferals
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Forum
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Twitter
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline">
-            Facebook
-          </li>
-          <li class="text-xs font-light sm:text-sm hover:underline ">
-            Developers
-          </li>
-        </ul>
+            <section class="bg-white relative mx-40  p-3 ">
+                <div class="text-inputColor flex flex-wrap sm:grid sm:grid-cols-5 sm:gap-3">
+                    <ul class="p-8">
+                        <li class="mb-2 font-bold text-xs sm:text-sm">
+                            Dropbox
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Install
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Mobile
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Pricing
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Business
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline ">
+                            Enterprise
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline ">
+                            Features
+                        </li>
+                    </ul>
+                    <ul class="p-8">
+                        <li class="mb-2 font-bold text-xs sm:text-sm">
+                            About us
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Dropbox Blog
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            About
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Branding
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            News
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline ">
+                            Jobs
+                        </li>
+                    </ul>
+                    <ul class="p-8">
+                        <li class="mb-2 font-bold text-xs sm:text-sm">
+                            Support
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Help Center
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Contact us
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Copyright
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Cookie Policy
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline ">
+                            Cookies & CCPA preferences
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline ">
+                            Privacy & Terms
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline ">
+                            Sitemap
+                        </li>
+                    </ul>
+                    <ul class="p-8">
+                        <li class="mb-2 font-bold text-xs sm:text-sm">
+                            Community
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Refferals
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Forum
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Twitter
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline">
+                            Facebook
+                        </li>
+                        <li class="text-xs font-light sm:text-sm hover:underline ">
+                            Developers
+                        </li>
+                    </ul>
 
-        
-          <div class="flex text-inputColor ml-5 mt-8 w-56 font-semibold">
-        <i class="fa-solid mx-4 fa-earth-americas"></i>
-        <p class="-mt-1 hover:underline ">English (United States)</p>
-      </div>
-      </div>
-    </section>
+
+                    <div class="flex text-inputColor ml-5 mt-8 w-56 font-semibold">
+                        <i class="fa-solid mx-4 fa-earth-americas"></i>
+                        <p class="-mt-1 hover:underline ">English (United States)</p>
+                    </div>
+                </div>
+            </section>
         </footer>
     </div>
 </template>
