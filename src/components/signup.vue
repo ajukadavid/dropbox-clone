@@ -15,7 +15,7 @@
             <input type="text" class="w-full p-4 rounded-lg" placeholder="First name" />
             <input type="text" class="w-full p-4 rounded-lg" placeholder="Last name" />
             <input type="text" class="w-full p-4 rounded-lg" v-model="email" placeholder="Email" />
-            <input type="text" class="w-full p-4 rounded-lg" v-model="password" placeholder="Password" />
+            <input type="password" class="w-full p-4 rounded-lg" v-model="password" placeholder="Password" />
         </form>
         <p> <input type="checkbox" class="ml-5 p-2" />
             I agree to the <span class="underline underline-offset-1 text-blue-400">Dropbox Terms.</span> Learn about
