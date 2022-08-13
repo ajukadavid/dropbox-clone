@@ -3,7 +3,7 @@
 <template>
   <Navbar class="hidden sm:flex" />
   <div class="">
-    <nav class="sm:hidden sticky top-0 z-50">
+    <nav class="sm:hidden sticky top-0 z-50 bg-white">
       <div class="flex justify-between">
         <div class="flex">
           <a href="#">
