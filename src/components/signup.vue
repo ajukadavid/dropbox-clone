@@ -17,7 +17,7 @@
             <input type="text" class="w-full p-4 rounded-lg" v-model="email" placeholder="Email" />
             <input type="text" class="w-full p-4 rounded-lg" v-model="password" placeholder="Password" />
         </form>
-        <p> <input type="checkbox" class="ml-5 p-8" />
+        <p> <input type="checkbox" class="ml-5 p-2" />
             I agree to the <span class="underline underline-offset-1 text-blue-400">Dropbox Terms.</span> Learn about
             how we
         <p class="ml-12">use and protect your data in our <span
@@ -87,7 +87,7 @@
                         
                         <p class=" mb-4 text-red-500">{{errMsg}}</p>
                     </form>
-                    <p> <input type="checkbox" class="ml-5 p-8" />
+                    <p> <input type="checkbox" class="ml-5 p-2" />
                         I agree to the <span class="underline underline-offset-1 text-blue-400">Dropbox Terms.</span>
                         Learn about
                         how we

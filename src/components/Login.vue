@@ -117,7 +117,7 @@
                         <p class=" mb-4 text-red-500">{{errMsg}}</p>
                     </form>
                     <div class="flex justify-between ml-4">
-                        <p> <input type="checkbox" class="ml-5 p-8" />
+                        <p> <input type="checkbox" class="ml-5 p-2" />
                             <span class="p-2 text-sm">Remember me</span>
 
                         </p>
