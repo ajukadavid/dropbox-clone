@@ -4,7 +4,7 @@
             <img src="../assets/loginLogo.png" class="img-logo mx-2" />
             <h2>Create a Dropbox account</h2>
         </div>
-        <div class="mb-3 text-xs ml-14">
+        <div class="mb-3 text-xs ml-10">
             <span>Get the best Dropbox experience on-the-go, for free!</span>
         </div>
         <div class="px-10 mx-5 p-4 bg-green-600">
