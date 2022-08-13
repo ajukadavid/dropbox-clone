@@ -27,7 +27,11 @@
         <div class="px-10 mx-5 p-4 mt-5 bg-blue-600" @click.prevent="register">
             <button class="text-white ml-16">Create an account</button>
         </div>
-        <p class="text-blue-500 ml-28 mt-5">I already have an account</p>
+        <p class="text-blue-500 ml-28 mt-5">
+             <router-link to="/" class="cursor-pointer">I already have an account</router-link>
+            
+
+        </p>
 
         <div class="border-t-2 flex justify-between mt-4 p-2">
             <div></div>

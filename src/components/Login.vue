@@ -44,7 +44,7 @@
             <button class="text-white ml-28">Sign in</button>
         </div>
         <p class="text-blue-500 text-sm ml-5 mt-2">Forgot your password?</p>
-        <p class=" text-sm ml-36 mt-2">(or <span class="text-blue-500"><a href="/signup">Create an account</a></span>)
+        <p class=" text-sm ml-36 mt-2">(or <span class="text-blue-500"> <router-link to="/signup" class="text-blue-500 cursor-pointer text-sm">create an account</router-link>)</span>
         </p>
         <div class="border-t-2 flex justify-between mt-4 p-2">
             <div></div>
