@@ -207,7 +207,7 @@
           <div class="m-3"></div>
         </div>
       </div>
-      <div class="w-full r text-white h-20 mb-2 p-6 flex justify-between bg-blue-700">
+      <div class="w-full  text-white h-20 mb-2 mt-40 p-6 flex justify-between bg-blue-700">
           <span class="text-white">Get started</span>
           <span class="text-white"><i class="fa-solid fa-arrow-right"></i></span>
       </div>
