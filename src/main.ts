@@ -9,8 +9,8 @@ import Body from '../src/components/Body.vue'
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/', component: Body },
-        { path: '/login', name:'Login', component: Login },
+        { path: '/home', component: Body },
+        { path: '/', name:'Login', component: Login },
         { path: '/signup', name:'Sign Up', component: signup },
     ]
 })

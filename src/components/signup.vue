@@ -24,7 +24,7 @@
                 class="underline underline-offset-1 text-blue-400">Privacy policy</span></p>
 
         </p>
-        <div class="px-10 mx-5 p-4 mt-5 bg-blue-600" @click.prevent="register">
+        <div class="px-10 mx-5 p-4 mt-5 bg-blue-600" @click="register">
             <button class="text-white ml-16">Create an account</button>
         </div>
         <p class="text-blue-500 ml-28 mt-5">
@@ -253,6 +253,9 @@ const register = async () => {
                             break
                         case 'auth/weak-password':
                             errMsg.value = 'The password must be 6 characters long or more.'
+                            break
+                        case 'auth/email-already-in-use':
+                            errMsg.value = 'Email already in use.'
                             break
                         default:
                             errMsg.value = 'There was a problem creating the account.'

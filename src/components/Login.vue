@@ -295,7 +295,7 @@ const loginGoogle = async () => {
   }).catch((error) => {
       switch (error.code) {
         default:
-          errMsg.value = "There was a problem loggin in";
+          errMsg.value = "There was a problem logging you in";
           break;
       }
     });
