@@ -13,5 +13,12 @@ preview: https://dropbox-clone-sigma.vercel.app/
 
 
 <h6>Mobile</h6>
-<img width="411" alt="Screenshot 2023-02-03 at 21 09 39" src="https://user-images.githubusercontent.com/25822805/216701348-8feb3c41-69fd-4a23-9397-ddffb0a1a162.png">
-<img width="411" alt="Screenshot 2023-02-03 at 21 09 51" src="https://user-images.githubusercontent.com/25822805/216701359-f792d664-c376-4db9-ac4c-3337e2c07a64.png">
+
+<table>
+  <tr>
+    <td valign="top"><img width="411" alt="Screenshot 2023-02-03 at 21 09 39" src="https://user-images.githubusercontent.com/25822805/216701348-8feb3c41-69fd-4a23-9397-ddffb0a1a162.png"></td>
+    <td valign="top"><img width="411" alt="Screenshot 2023-02-03 at 21 09 51" src="https://user-images.githubusercontent.com/25822805/216701359-f792d664-c376-4db9-ac4c-3337e2c07a64.png"></td>
+  </tr>
+</table>
+
+
